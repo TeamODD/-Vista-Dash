@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Msft_Nostalgia_Landscape_Bliss_XP_0: -7282876501999438520
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

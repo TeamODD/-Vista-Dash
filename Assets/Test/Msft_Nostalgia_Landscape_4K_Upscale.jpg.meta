@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Msft_Nostalgia_Landscape_4K_Upscale_0: -5741942471666335930
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

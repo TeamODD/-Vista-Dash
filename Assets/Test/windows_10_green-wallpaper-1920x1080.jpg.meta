@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      windows_10_green-wallpaper-1920x1080_0: 5749672273171181174
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
