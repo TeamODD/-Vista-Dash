@@ -1,6 +1,7 @@
 using UnityEngine;
 
 public class NewMonoBehaviourScript : MonoBehaviour
+public class Merge_Test1 : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
