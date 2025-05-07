@@ -3,48 +3,47 @@ using UnityEngine.InputSystem;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [SerializeField] float timeSum = 0.3f;
-    [SerializeField] GameObject bulletPrefab;
-    [SerializeField] Transform bulletPoint;
-    ScrollingObject scrollingBullet;
-    private bool isAttackPressed = false;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] GameObject bulletPrefab; // 총알 프리팹
+    [SerializeField] Transform bulletPoint; // 총알 발사 위치
+    [SerializeField] float fireRate = 0.3f; // 발사 주기 (초)
+
+    private bool isAttackPressed = false; // 공격 키가 눌려있는지 상태 추적
+    private bool wasAttackPressed = false; // 이전에 공격 키가 눌렸는지 추적
+    private float timeSum = 0f; // 마지막 발사 이후 경과 시간
+
+    // InputSystem에서 키 입력을 받는 메서드
+    public void OnAttack()
     {
-        
+        isAttackPressed = true;
     }
-
-    void OnAttack(InputAction.CallbackContext context)
-    {
-        if(context.performed)
-        {
-            isAttackPressed = true;
-        }
-        else if(context.canceled)
-        {
-            isAttackPressed = false;
-        }
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        timeSum += Time.deltaTime;
-        if(timeSum >= 0.3f && isAttackPressed == true)
-        {
-            Fire();
-            timeSum = 0f;
-        }
-    }
-
     void Fire()
     {
-        if(isAttackPressed)
+        Debug.Log("총알 생성");
+        Instantiate(bulletPrefab, bulletPoint.position, bulletPoint.rotation);
+    }
+
+    void Update()
+    {
+        if (isAttackPressed)
         {
-            GameObject bullet = Instantiate(bulletPrefab,bulletPoint.position,bulletPoint.rotation);
+            timeSum += Time.deltaTime;
+
+            if (timeSum >= fireRate && !wasAttackPressed)
+            {
+                Debug.Log("총알 발사");
+                Fire();
+                wasAttackPressed = true;
+                timeSum = 0f;
+            }
+        }
+        else if(!isAttackPressed)
+        {
+            Debug.Log("키에서 떼짐");
+            wasAttackPressed = false;
         }
     }
 
-    
 }
+
+
+
