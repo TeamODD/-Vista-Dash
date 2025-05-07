@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Underground
+  - Background
   layers:
   - Default
   - TransparentFX

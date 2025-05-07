@@ -1,8 +1,9 @@
+using UnityEditor;
 using UnityEngine;
 
 public class ScrollingObject : MonoBehaviour
 {
-    [SerializeField] enum MoveDirection{Left,Right,Up,Down}
+    [SerializeField] enum MoveDirection{Left,Right,Up,Down,LeftUP,LeftDown}
     [SerializeField] MoveDirection direction = MoveDirection.Left;
     [SerializeField] float leftSpeed = 3f;
 
@@ -13,16 +14,22 @@ public class ScrollingObject : MonoBehaviour
         switch (direction)
         {
             case MoveDirection.Left:
-                move = Vector3.left;
+                move = Vector2.left;
                 break;
             case MoveDirection.Right:
-                move = Vector3.right;
+                move = Vector2.right;
                 break;
             case MoveDirection.Up:
-                move = Vector3.up;
+                move = Vector2.up;
                 break;
             case MoveDirection.Down:
-                move = Vector3.down;
+                move = Vector2.down;
+                break;
+            case MoveDirection.LeftUP:
+                move = (Vector2.left + Vector2.up).normalized;
+                break;
+            case MoveDirection.LeftDown:
+                move = (Vector2.left + Vector2.down).normalized;
                 break;
         }
 

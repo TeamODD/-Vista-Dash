@@ -11,12 +11,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float fallSpeed = 2f;
     [SerializeField] float lowJumpSpeed = 1.5f;
 
+    [SerializeField] GameObject jumpResetImage; 
+
     Rigidbody2D playerRb;
     Vector2 playerJump;
     private int jumpCount = 0;
     private bool isJumpPressed = false;
 
     private Animator animator;
+    private bool checkJump = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -65,7 +68,17 @@ public class PlayerMovement : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Underground"))
         {
-            jumpCount = 0;
+            if(checkJump == false)
+            {
+                jumpResetImage.SetActive(false);
+                jumpCount = 0;
+                checkJump = true;
+            }
+            else if(checkJump == true)
+            {
+                jumpResetImage.SetActive(true);
+                jumpCount = 0;
+            }
         }
     }
 }
