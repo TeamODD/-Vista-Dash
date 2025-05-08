@@ -13,6 +13,11 @@ public class ScrollingObject : MonoBehaviour
         leftSpeed = newspeed;
     }
 
+    private void Start()
+    {
+       GameManager = FindAnyObjectByType<GameManager>();
+    }
+
     void Update()
     {   
         Vector2 move = Vector2.zero;
