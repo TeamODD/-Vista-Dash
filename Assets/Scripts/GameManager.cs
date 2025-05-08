@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 
     public int CurrentStage = 1; //현재 스테이지값 = 1
 
-    public float Stage2Multiple = 1.2f;
+    public float Stage2Multiple = 1.2f; 
     public float Stage3Multiple = 1.5f;
 
     public float CurrentSpeed = 10.0f;
