@@ -12,9 +12,14 @@ public class PlayerAttack : MonoBehaviour
     private float timeSum = 0f; // 마지막 발사 이후 경과 시간
 
     // InputSystem에서 키 입력을 받는 메서드
-    public void OnAttack()
+    public void OnPressFire()
     {
         isAttackPressed = true;
+    }
+
+    public void OnReleaseFire()
+    {
+        isAttackPressed = false;
     }
     void Fire()
     {
@@ -28,18 +33,12 @@ public class PlayerAttack : MonoBehaviour
         {
             timeSum += Time.deltaTime;
 
-            if (timeSum >= fireRate && !wasAttackPressed)
+            if (timeSum >= fireRate)
             {
                 Debug.Log("총알 발사");
                 Fire();
-                wasAttackPressed = true;
                 timeSum = 0f;
             }
-        }
-        else if(!isAttackPressed)
-        {
-            Debug.Log("키에서 떼짐");
-            wasAttackPressed = false;
         }
     }
 
