@@ -152,8 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e42ab0d6a8154b42b896777efeb9268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameManager: {fileID: 0}
   direction: 1
-  leftSpeed: 3
+  leftSpeed: 30
 --- !u!50 &3208473986926828249
 Rigidbody2D:
   serializedVersion: 5
