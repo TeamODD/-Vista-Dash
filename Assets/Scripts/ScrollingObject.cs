@@ -3,12 +3,18 @@ using UnityEngine;
 
 public class ScrollingObject : MonoBehaviour
 {
-    [SerializeField] enum MoveDirection{Left,Right,Up,Down,LeftUP,LeftDown}
+    public GameManager GameManager;
+    [SerializeField] enum MoveDirection { Left, Right, Up, Down, LeftUP, LeftDown }
     [SerializeField] MoveDirection direction = MoveDirection.Left;
-    [SerializeField] float leftSpeed = 3f;
+    [SerializeField] float leftSpeed = 10.0f;
+
+    public void UpdateSpeed(float newspeed)
+    {
+        leftSpeed = newspeed;
+    }
 
     void Update()
-    {
+    {   
         Vector2 move = Vector2.zero;
 
         switch (direction)
