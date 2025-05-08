@@ -3,55 +3,48 @@ using UnityEngine.InputSystem;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [SerializeField] GameObject bulletPrefab; // 총알 프리팹
-    [SerializeField] Transform bulletPoint; // 총알 발사 위치
-    [SerializeField] float fireRate = 0.3f; // 발사 주기 (초)
-    [SerializeField] int bulletCount = 30;
-
-    private bool isAttackPressed = false; // 공격 키가 눌려있는지 상태 추적
-    private bool wasAttackPressed = false; // 이전에 공격 키가 눌렸는지 추적
-    private float timeSum = 0f; // 마지막 발사 이후 경과 시간
-
-    // InputSystem에서 키 입력을 받는 메서드
-    public void OnPressFire()
+    [SerializeField] float timeSum = 0.3f;
+    [SerializeField] GameObject bulletPrefab;
+    [SerializeField] Transform bulletPoint;
+    ScrollingObject scrollingBullet;
+    private bool isAttackPressed = false;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
     {
-        isAttackPressed = true;
+        
     }
 
-    public void OnReleaseFire()
+    void OnAttack(InputAction.CallbackContext context)
     {
-        isAttackPressed = false;
-    }
-    void Fire()
-    {
-        if(bulletCount >0)
+        if(context.performed)
         {
-            Debug.Log("총알 발사");
-            Instantiate(bulletPrefab, bulletPoint.position, bulletPoint.rotation);
-            bulletCount--;
+            isAttackPressed = true;
         }
-        else
-        {   
-            Debug.Log("총알 발사 불가");
+        else if(context.canceled)
+        {
+            isAttackPressed = false;
         }
     }
 
+
+    // Update is called once per frame
     void Update()
     {
-        if (isAttackPressed)
+        timeSum += Time.deltaTime;
+        if(timeSum >= 0.3f && isAttackPressed == true)
         {
-            timeSum += Time.deltaTime;
-
-            if (timeSum >= fireRate)
-            {
-                Debug.Log("0.3초마다");
-                Fire();
-                timeSum = 0f;
-            }
+            Fire();
+            timeSum = 0f;
         }
     }
 
+    void Fire()
+    {
+        if(isAttackPressed)
+        {
+            GameObject bullet = Instantiate(bulletPrefab,bulletPoint.position,bulletPoint.rotation);
+        }
+    }
+
+    
 }
-
-
-
