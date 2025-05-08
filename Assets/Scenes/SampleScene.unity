@@ -3076,7 +3076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpSpeed: 7
   maxJumpCount: 3
-  fallSpeed: 2
+  fallSpeed: 5
   lowJumpSpeed: 1.5
   jumpResetImage: {fileID: 1258312766}
   jumpImage1: {fileID: 365858750}
