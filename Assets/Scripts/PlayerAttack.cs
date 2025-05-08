@@ -6,6 +6,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] GameObject bulletPrefab; // 총알 프리팹
     [SerializeField] Transform bulletPoint; // 총알 발사 위치
     [SerializeField] float fireRate = 0.3f; // 발사 주기 (초)
+    [SerializeField] int bulletCount = 30;
 
     private bool isAttackPressed = false; // 공격 키가 눌려있는지 상태 추적
     private bool wasAttackPressed = false; // 이전에 공격 키가 눌렸는지 추적
@@ -23,8 +24,16 @@ public class PlayerAttack : MonoBehaviour
     }
     void Fire()
     {
-        Debug.Log("총알 생성");
-        Instantiate(bulletPrefab, bulletPoint.position, bulletPoint.rotation);
+        if(bulletCount >0)
+        {
+            Debug.Log("총알 발사");
+            Instantiate(bulletPrefab, bulletPoint.position, bulletPoint.rotation);
+            bulletCount--;
+        }
+        else
+        {   
+            Debug.Log("총알 발사 불가");
+        }
     }
 
     void Update()
@@ -35,7 +44,7 @@ public class PlayerAttack : MonoBehaviour
 
             if (timeSum >= fireRate)
             {
-                Debug.Log("총알 발사");
+                Debug.Log("0.3초마다");
                 Fire();
                 timeSum = 0f;
             }
