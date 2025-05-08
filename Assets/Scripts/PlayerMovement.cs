@@ -80,5 +80,11 @@ public class PlayerMovement : MonoBehaviour
                 jumpCount = 0;
             }
         }
+        //플랫폼 태그에 닿으면 점프 초기화와 UI등장
+        if(collision.gameObject.CompareTag("Platform"))
+        {
+            jumpResetImage.SetActive(true);
+            jumpCount = 0;
+        }
     }
 }
