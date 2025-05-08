@@ -5,16 +5,9 @@ public class PlatformSpawner : MonoBehaviour
 {
     public int Score = 0; //스코어 초기값 0
     public GameObject PlatformPrefeb;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     public ItemSpawner ItemSpawner;
+    public GameManager gameManager;
 
-=======
-    public GameManager GameManager;
->>>>>>> Stashed changes
-=======
-    public GameManager GameManager;
->>>>>>> Stashed changes
     public float CurrentSpeed;
     int CurrentStage; // 게임 매니저에서 가져올 스테이지 정보를 저장
     float MaxYpos; // 현재 스포너의 최대 y축 높이 
@@ -84,7 +77,7 @@ public class PlatformSpawner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        GameManager = FindAnyObjectByType<GameManager>();
+        gameManager = FindAnyObjectByType<GameManager>();
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>(); // 스포너의 스프라이트 렌더러를 갖고 온다. 
 
         // 현재 스포너의 최대, 최소 높이 y좌표를 갖고 오기
@@ -95,9 +88,10 @@ public class PlatformSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager != null)
+        if (gameManager != null)
         {
-            CurrentStage = GameManager.CurrentStage;
+            CurrentStage = gameManager.CurrentStage;
+            Debug.Log("gamemanger 참조 성공" + CurrentStage);
         }
 
         TimeSum += Time.deltaTime; // 초마다 더한다. 

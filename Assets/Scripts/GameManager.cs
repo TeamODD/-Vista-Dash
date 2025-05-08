@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Spawner = FindAnyObjectByType<PlatformSpawner>();
         Spawner.UpdatePlatformSpeed(CurrentSpeed); // PlatformSpawner의 Speed를 현재 속도로 변경
     }
 
