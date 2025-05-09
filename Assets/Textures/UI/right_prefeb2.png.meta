@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e8a35dd883704e44bb53e70cb5d337ff
+guid: 0fa23ff78c5012543b9317e131fa5262
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1305507292314274778
-    second: left_prefeb_0
+      213: -8814416688887947846
+    second: right_prefeb2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: left_prefeb_0
+      name: right_prefeb2_0
       rect:
         serializedVersion: 2
-        x: 386
-        y: 689
-        width: 536
-        height: 536
+        x: 1126
+        y: 697
+        width: 519
+        height: 520
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: adb031a27f71e1210800000000000000
-      internalID: 1305507292314274778
+      spriteID: abd1f84e8b6eca580800000000000000
+      internalID: -8814416688887947846
       vertices: []
       indices: 
       edges: []

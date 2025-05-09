@@ -129,10 +129,10 @@ TextureImporter:
       name: right_prefeb_0
       rect:
         serializedVersion: 2
-        x: 902
-        y: 706
-        width: 502
-        height: 502
+        x: 885
+        y: 689
+        width: 536
+        height: 536
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      right_prefeb_0: -9217430835140702600
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

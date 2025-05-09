@@ -35,14 +35,6 @@ public class GameManager : MonoBehaviour
        
     }
 
-
-    /*
-        IEnumerator TestTime()
-        {
-            yield return new WaitForSeconds(2f);
-            CurrentScore = 10;
-        }
-    */
     // Update is called once per frame
     void Update()
     {
