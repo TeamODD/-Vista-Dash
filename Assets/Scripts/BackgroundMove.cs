@@ -1,10 +1,9 @@
 using UnityEngine;
 
-public class InfiniteScrollBackground : MonoBehaviour
+public class BackgroundMove : MonoBehaviour
 {
     public GameObject background1;
     public GameObject background2;
-    public float scrollSpeed = 2f;
 
     private float backgroundWidth;
 

@@ -1,39 +1,73 @@
+using System.Collections;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public PlatformSpawner Spawner; //PlatformSpawner ¸¦ Spawner·Î ºÒ·¯¿È
+    //ë°°ê²½ ì—°ê²°
+    public GameObject Stage1_1;
+    public GameObject Stage1_2;  
+    public GameObject Stage2_1;
+    public GameObject Stage2_2;
+    public GameObject Stage3_1;
+    public GameObject Stage3_2;
+
+    public PlatformSpawner Spawner; //PlatformSpawner ï¿½ï¿½ Spawnerï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½
     public ScrollingObject ScrollingObject;
 
-    public int CurrentStage = 1; //ÇöÀç ½ºÅ×ÀÌÁö°ª = 1
+    public int CurrentStage = 1; //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ = 1
 
     public float Stage2Multiple = 1.2f;
     public float Stage3Multiple = 1.5f;
-
     public float CurrentSpeed = 10.0f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Spawner = FindAnyObjectByType<PlatformSpawner>();
-        Spawner.UpdatePlatformSpeed(CurrentSpeed); // PlatformSpawnerÀÇ Speed¸¦ ÇöÀç ¼Óµµ·Î º¯°æ
+        Spawner.UpdatePlatformSpeed(CurrentSpeed); // PlatformSpawnerï¿½ï¿½ Speedï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Óµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    
+      /*
+        Stage1_1.SetActive(true);
+        Stage1_2.SetActive(true);
+        Stage2_1.SetActive(false);
+        Stage2_2.SetActive(false);
+        StartCoroutine(TestTime());
+       */
     }
 
+
+    /*
+        IEnumerator TestTime()
+        {
+            yield return new WaitForSeconds(2f);
+            CurrentScore = 10;
+        }
+    */
     // Update is called once per frame
     void Update()
     {
-        int CurrentScore = Spawner.GetScore(); // PlatformSpawner¿¡¼­ ÇöÀç ½ºÄÚ¾î ¹Þ¾Æ¿È
+        int CurrentScore = Spawner.GetScore(); // PlatformSpawnerï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¾ï¿½ ï¿½Þ¾Æ¿ï¿½
 
-        if (CurrentStage == 1 && CurrentScore >= 10) // 2½ºÅ×ÀÌÁö ÁøÀÔ½Ã
+        if (CurrentStage == 1 && CurrentScore >= 10) // 2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô½ï¿½
         {
+            /*
+            Stage1_1.SetActive(false);
+            Stage1_2.SetActive(false);
+            Stage2_1.SetActive(true);
+            Stage2_2.SetActive(true);
+            Debug.Log("ìŠ¤í…Œì´ì§€2 ë°°ê²½ ì¼œì§");
+            */
             CurrentStage = 2; 
-            CurrentSpeed = CurrentSpeed * Stage2Multiple; // 1.2¹è == 12f
-            Spawner.UpdatePlatformSpeed(CurrentSpeed); // ½ºÆ÷³Ê
-            ScrollingObject.UpdateSpeed(CurrentSpeed); // ½ºÅ©·Ñ¸µ µÑ´Ù ¼Óµµ º¯°æ
+            CurrentSpeed = CurrentSpeed * Stage2Multiple; // 1.2ï¿½ï¿½ == 12f
+            Spawner.UpdatePlatformSpeed(CurrentSpeed); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            ScrollingObject.UpdateSpeed(CurrentSpeed); // ï¿½ï¿½Å©ï¿½Ñ¸ï¿½ ï¿½Ñ´ï¿½ ï¿½Óµï¿½ ï¿½ï¿½ï¿½ï¿½
+
+
         }
-        else if (CurrentStage == 2 && CurrentScore >= 20) // 3½ºÅ×ÀÌÁö ÁøÀÔ½Ã
+        else if (CurrentStage == 2 && CurrentScore >= 20) // 3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô½ï¿½
         {
             CurrentStage = 3;
-            CurrentSpeed = CurrentSpeed * Stage3Multiple; // 1.5¹è == 18f
+            CurrentSpeed = CurrentSpeed * Stage3Multiple; // 1.5ï¿½ï¿½ == 18f
             Spawner.UpdatePlatformSpeed(CurrentSpeed);
             ScrollingObject.UpdateSpeed(CurrentSpeed);
         }
