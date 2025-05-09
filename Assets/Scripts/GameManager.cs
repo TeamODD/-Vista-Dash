@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         int CurrentScore = Spawner.GetScore(); // PlatformSpawner���� ���� ���ھ� �޾ƿ�
-
+        
         if (CurrentStage == 1 && CurrentScore >= 10) // 2�������� ���Խ�
         {
             /*

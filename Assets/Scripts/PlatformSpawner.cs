@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlatformSpawner : MonoBehaviour
 {
     public int Score = 0; //스코어 초기값 0
+
     public GameObject PlatformPrefeb;
     public ItemSpawner ItemSpawner;
     public GameManager gameManager;
