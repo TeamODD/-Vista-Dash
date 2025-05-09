@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9151613936617190580}
   - component: {fileID: 3037067259934026861}
   m_Layer: 0
-  m_Name: platform4
+  m_Name: platform4_Stage2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,16 +61,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1791170092064182046, guid: 2869dd1cfbdf90f478a7ebf9bed3b4c5, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 5.02
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -1791170092064182046, guid: 2869dd1cfbdf90f478a7ebf9bed3b4c5, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 5.02
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4549662110137007549, guid: 2869dd1cfbdf90f478a7ebf9bed3b4c5, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1305507292314274778, guid: e8a35dd883704e44bb53e70cb5d337ff, type: 3}
+      objectReference: {fileID: 1067230577490750288, guid: 081d92a580c01c34d9deafe4bff002cb, type: 3}
     - target: {fileID: 6142777558447395992, guid: 2869dd1cfbdf90f478a7ebf9bed3b4c5, type: 3}
       propertyPath: m_Name
       value: Mid
@@ -139,16 +139,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1791170092064182046, guid: 2869dd1cfbdf90f478a7ebf9bed3b4c5, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 5.02
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -1791170092064182046, guid: 2869dd1cfbdf90f478a7ebf9bed3b4c5, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 5.02
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4549662110137007549, guid: 2869dd1cfbdf90f478a7ebf9bed3b4c5, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -9217430835140702600, guid: 25a6cade5fabc3e4c923be9b93ebc3e5, type: 3}
+      objectReference: {fileID: 1067230577490750288, guid: 081d92a580c01c34d9deafe4bff002cb, type: 3}
     - target: {fileID: 6142777558447395992, guid: 2869dd1cfbdf90f478a7ebf9bed3b4c5, type: 3}
       propertyPath: m_Name
       value: Mid (3)
@@ -217,16 +217,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1791170092064182046, guid: 2869dd1cfbdf90f478a7ebf9bed3b4c5, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 5.03
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -1791170092064182046, guid: 2869dd1cfbdf90f478a7ebf9bed3b4c5, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 5.02
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4549662110137007549, guid: 2869dd1cfbdf90f478a7ebf9bed3b4c5, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -8175107903928270642, guid: 54d112ff0dde70f4b8c16134fe02cc1a, type: 3}
+      objectReference: {fileID: 1067230577490750288, guid: 081d92a580c01c34d9deafe4bff002cb, type: 3}
     - target: {fileID: 6142777558447395992, guid: 2869dd1cfbdf90f478a7ebf9bed3b4c5, type: 3}
       propertyPath: m_Name
       value: Mid (2)
@@ -295,16 +295,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1791170092064182046, guid: 2869dd1cfbdf90f478a7ebf9bed3b4c5, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 5.03
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -1791170092064182046, guid: 2869dd1cfbdf90f478a7ebf9bed3b4c5, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 5.02
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4549662110137007549, guid: 2869dd1cfbdf90f478a7ebf9bed3b4c5, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -8175107903928270642, guid: 54d112ff0dde70f4b8c16134fe02cc1a, type: 3}
+      objectReference: {fileID: 1067230577490750288, guid: 081d92a580c01c34d9deafe4bff002cb, type: 3}
     - target: {fileID: 4549662110137007549, guid: 2869dd1cfbdf90f478a7ebf9bed3b4c5, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
