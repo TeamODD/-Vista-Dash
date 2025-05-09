@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: -1791170092064182046}
   m_Layer: 0
   m_Name: Mid
-  m_TagString: Underground
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
