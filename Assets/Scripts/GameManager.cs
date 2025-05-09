@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject Stage3_2;
 
     public PlatformSpawner Spawner; //PlatformSpawner �� Spawner�� �ҷ���
-    public ScrollingObject ScrollingObject;
+    public ScrollingObject scrollingObject;
 
     public int CurrentStage = 1; //���� ���������� = 1
 
@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     {
         Spawner = FindAnyObjectByType<PlatformSpawner>();
         Spawner.UpdatePlatformSpeed(CurrentSpeed); // PlatformSpawner�� Speed�� ���� �ӵ��� ����
+        scrollingObject = FindAnyObjectByType<ScrollingObject>();
     
       
         Stage1_1.SetActive(true);
@@ -57,7 +58,7 @@ public class GameManager : MonoBehaviour
             CurrentStage = 2; 
             CurrentSpeed = CurrentSpeed * Stage2Multiple; // 1.2�� == 12f
             Spawner.UpdatePlatformSpeed(CurrentSpeed); // ������
-            ScrollingObject.UpdateSpeed(CurrentSpeed); // ��ũ�Ѹ� �Ѵ� �ӵ� ����
+            scrollingObject.UpdateSpeed(CurrentSpeed); // ��ũ�Ѹ� �Ѵ� �ӵ� ����
 
 
         }
@@ -66,7 +67,7 @@ public class GameManager : MonoBehaviour
             CurrentStage = 3;
             CurrentSpeed = CurrentSpeed * Stage3Multiple; // 1.5�� == 18f
             Spawner.UpdatePlatformSpeed(CurrentSpeed);
-            ScrollingObject.UpdateSpeed(CurrentSpeed);
+            scrollingObject.UpdateSpeed(CurrentSpeed);
         }
     }
 }
