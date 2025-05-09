@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &877390725783416906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7297091698904405925}
+  - component: {fileID: 7682697727270639961}
+  m_Layer: 0
+  m_Name: GameManagerObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7297091698904405925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877390725783416906}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.0037422, y: -0.24241766, z: -0.014115454}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7682697727270639961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877390725783416906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478ec953cea86074bbdc79b37873e3c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stage1_1: {fileID: 5450242302481249685, guid: 72f5e6c17b974484f94c1246b7b4a474, type: 3}
+  Stage1_2: {fileID: 7700400216618895183, guid: 00ec53186b03fcb4ca435756982b7182, type: 3}
+  Stage2_1: {fileID: 1733610169457131266, guid: 31dcadf65fd2c29448783669b65f5956, type: 3}
+  Stage2_2: {fileID: 670200855874327073, guid: 71b835afdb38dd84d92d525b9b77c845, type: 3}
+  Stage3_1: {fileID: 0}
+  Stage3_2: {fileID: 0}
+  Spawner: {fileID: 1935961559192797728, guid: 4fbfb2e09285523438f37c7fdd45d925, type: 3}
+  scrollingObject: {fileID: 9038980138731280404, guid: 6c8b1696411ab354dbb888cfe2fdb3b2, type: 3}
+  CurrentStage: 1
+  Stage2Multiple: 1.2
+  Stage3Multiple: 1.5
+  CurrentSpeed: 10
