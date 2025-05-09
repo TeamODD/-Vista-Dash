@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Underground
   - Background
+  - makeBullet
   layers:
   - Default
   - TransparentFX

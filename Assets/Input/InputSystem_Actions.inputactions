@@ -85,6 +85,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "PressFire",
+                    "type": "Button",
+                    "id": "7705c555-6cb4-4b08-95c5-e4297b7f5833",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ReleaseFire",
+                    "type": "Button",
+                    "id": "521ffc5b-ac05-4f85-9b37-c6cad4ffcd12",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -481,6 +499,28 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "45fae168-8f1f-43da-99be-ce3c1ccc0e41",
+                    "path": "<Keyboard>/n",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PressFire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "40c3a8fb-2c0d-4797-97b2-2ef6867b4f2a",
+                    "path": "<Keyboard>/n",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReleaseFire",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
