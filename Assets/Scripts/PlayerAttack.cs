@@ -1,12 +1,15 @@
  using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] GameObject bulletPrefab; // 총알 프리팹
+    [SerializeField] GameObject noAmmoAlert; // 탄환이 없을 때 활성화 할 경고창 
     [SerializeField] Transform bulletPoint; // 총알 발사 위치
     [SerializeField] float fireRate = 0.3f; // 발사 주기 (초)
     [SerializeField] int bulletCount = 30;
+    [SerializeField] Text ammoRemain; // 남은 탄환을 보여줄 텍스트 객체
 
     private bool isAttackPressed = false; // 공격 키가 눌려있는지 상태 추적
     private bool wasAttackPressed = false; // 이전에 공격 키가 눌렸는지 추적
@@ -32,6 +35,7 @@ public class PlayerAttack : MonoBehaviour
         }
         else
         {   
+            noAmmoAlert.SetActive(true); // 총알 부족 UI 활성화
             Debug.Log("총알 발사 불가");
         }
     }
@@ -49,6 +53,12 @@ public class PlayerAttack : MonoBehaviour
                 timeSum = 0f;
             }
         }
+
+        updateAmmo();
     }
 
+    void updateAmmo()
+    {
+        ammoRemain.text = "남은 탄환 : "+bulletCount;
+    }
 }

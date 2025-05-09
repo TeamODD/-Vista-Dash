@@ -23,10 +23,16 @@ public class PlayerMovement : MonoBehaviour
 
     private Animator animator;
     private bool checkJump = false;
+    // 사용할 오디오 컴포넌트, 오디오 클립들
+    AudioSource audioSource;
+    [SerializeField] AudioClip JumpSound; // 점프 시 재생할 사운드
+    [SerializeField] AudioClip LandSound; // 착지 시 재생할 사운드
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         playerRb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -36,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(isJumpPressed && jumpCount <maxJumpCount)
         {
+            audioSource.PlayOneShot(JumpSound); // 점프 사운드 재생
             playerRb.linearVelocity = new Vector2(0f,jumpSpeed);
             jumpCount++;
         }
@@ -113,6 +120,7 @@ public class PlayerMovement : MonoBehaviour
         //플랫폼 태그에 닿으면 점프 초기화와 UI등장
         if(collision.gameObject.CompareTag("Platform"))
         {
+            audioSource.PlayOneShot(LandSound); // 착시 사운드 재생
             jumpResetImage.SetActive(true);
             jumpCount = 0;
             jumpImage1.SetActive(true);
