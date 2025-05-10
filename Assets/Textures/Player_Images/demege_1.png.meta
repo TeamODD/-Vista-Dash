@@ -185,7 +185,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      demege_1_0: -250098794061976810
+      demege_1_1: 4032919446733255928
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

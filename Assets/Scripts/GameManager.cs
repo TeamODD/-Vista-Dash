@@ -53,24 +53,26 @@ public class GameManager : MonoBehaviour
         Debug.Log("스코어" +  CurrentScore + "스테이지" + CurrentStage + "속도" + CurrentSpeed);
         if (CurrentStage == 1 && CurrentScore >= 10) // 2�������� ���Խ�
         {
-            //Stage1_1.SetActive(false);
-            //Stage1_2.SetActive(false);
-            //Stage2_1.SetActive(true);
-            //Stage2_2.SetActive(true);
+            Stage1_1.SetActive(false);
+            Stage1_2.SetActive(false);
+            Stage2_1.SetActive(true);
+            Stage2_2.SetActive(true);
             Debug.Log("스테이지2 배경 켜짐");
-            CurrentStage = 2; 
+            CurrentStage = 2;
+            /* 
             CurrentSpeed = CurrentSpeed * Stage2Multiple; // 1.2�� == 12f
             Spawner.UpdatePlatformSpeed(CurrentSpeed); // ������
             scrollingObject.UpdateSpeed(CurrentSpeed); // ��ũ�Ѹ� �Ѵ� �ӵ� ����
-
-
+            */
         }
         else if (CurrentStage == 2 && CurrentScore >= 20) // 3�������� ���Խ�
         {
             CurrentStage = 3;
+            /*
             CurrentSpeed = CurrentSpeed * Stage3Multiple; // 1.5�� == 18f
             Spawner.UpdatePlatformSpeed(CurrentSpeed);
             scrollingObject.UpdateSpeed(CurrentSpeed);
+            */
         }
     }
 }
