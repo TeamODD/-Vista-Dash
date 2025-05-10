@@ -3923,6 +3923,7 @@ MonoBehaviour:
   Stage2Multiple: 1.2
   Stage3Multiple: 1.5
   CurrentSpeed: 10
+  isBoss: 0
 --- !u!4 &1961764820
 Transform:
   m_ObjectHideFlags: 0

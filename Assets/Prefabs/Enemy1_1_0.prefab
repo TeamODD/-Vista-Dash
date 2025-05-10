@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 918024406320379698}
   - component: {fileID: 8347581144434995806}
   - component: {fileID: 7732516807504091051}
+  - component: {fileID: 2780065597693462643}
   m_Layer: 0
   m_Name: Enemy1_1_0
   m_TagString: Untagged
@@ -182,3 +183,17 @@ MonoBehaviour:
   CurrentLife: 0
   MeleeDamage: 0
   Tombstone: {fileID: 0}
+--- !u!114 &2780065597693462643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876269738864779870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a443e7947ddc38b4386a370f1980b978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 21155469199542169, guid: a5e50c711df54bf4a9a40b835b05e044, type: 3}
+  fireRate: 1

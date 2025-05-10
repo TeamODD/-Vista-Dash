@@ -1,4 +1,5 @@
  using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,9 +9,12 @@ public class PlayerHealth : MonoBehaviour, IDamagable, IHealable
     [SerializeField] float maxHealth; // 체력 최대값 100 
     [SerializeField] float CurrentHealth; // 현재 체력 
     [SerializeField] Slider slider;
+
+    private Animator hitAnimator;
     void Start()
     {
         CurrentHealth = initHealth;
+        hitAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -20,13 +24,21 @@ public class PlayerHealth : MonoBehaviour, IDamagable, IHealable
 
     public void Damage(float damage) // 데미지를 입는 인터페이스 함수
     {
-        Debug.Log(damage+"만큼 피해를 입음");
+        Debug.Log(damage + "만큼 피해를 입음");
         CurrentHealth -= damage;
 
-        if(CurrentHealth <= 0) // 체력이 0이하라면 사망처리
+        hitAnimator.SetBool("isAttacked", true);
+        StartCoroutine(RestHitAnimation());
+        if (CurrentHealth <= 0) // 체력이 0이하라면 사망처리
         {
-            Die(); 
+            Die();
         }
+    }
+
+    private IEnumerator RestHitAnimation()
+    {
+        yield return new WaitForSeconds(0.5f);
+        hitAnimator.SetBool("isAttacked" , false);
     }
 
     public void Heal(float heal) // 치유를 하는 인터페이스 함수
