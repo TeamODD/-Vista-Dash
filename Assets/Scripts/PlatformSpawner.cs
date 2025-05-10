@@ -41,7 +41,7 @@ public class PlatformSpawner : MonoBehaviour
                     Instantiate(platform1_2, new Vector3(transform.position.x, randomY, 0), Quaternion.identity);
                 }
 
-                if (gameManager.isBoss==false) Score++;
+                if (gameManager.isBoss == false) Score++;
                 
                 break;
             case 2:

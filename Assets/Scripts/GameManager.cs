@@ -20,14 +20,14 @@ public class GameManager : MonoBehaviour
     public float Stage3Multiple = 1.5f;
     public float CurrentSpeed = 10.0f;
 
-    public bool isBoss;
+    public bool isBoss = false;
 
-    public void spawnBoss()
+    public void SpawnBoss()
     {
         isBoss = true;
     }
 
-    public void removeBoss()
+    public void RemoveBoss()
     {
         isBoss = false;
     }
@@ -44,7 +44,6 @@ public class GameManager : MonoBehaviour
         Stage2_1.SetActive(false);
         Stage2_2.SetActive(false);
        
-        isBoss = false;
     }
 
     // Update is called once per frame
