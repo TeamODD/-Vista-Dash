@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public float Stage3Multiple = 1.5f;
     public float CurrentSpeed = 10.0f;
 
+    public bool isBoss;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour
         Stage2_1.SetActive(false);
         Stage2_2.SetActive(false);
        
+        isBoss = false;
     }
 
     // Update is called once per frame

@@ -40,7 +40,9 @@ public class PlatformSpawner : MonoBehaviour
                 {
                     Instantiate(platform1_2, new Vector3(transform.position.x, randomY, 0), Quaternion.identity);
                 }
-                Score++;
+
+                if (gameManager.isBoss==false) Score++;
+                
                 break;
             case 2:
                 if (randnum == 1)
@@ -51,7 +53,9 @@ public class PlatformSpawner : MonoBehaviour
                 {
                     Instantiate(platform2_2, new Vector3(transform.position.x, randomY, 0), Quaternion.identity);
                 }
-                Score++;
+
+                if (gameManager.isBoss == false) Score++;
+
                 break;
             case 3:
                 if (randnum == 1)
@@ -62,7 +66,9 @@ public class PlatformSpawner : MonoBehaviour
                 {
                     Instantiate(platform3_2, new Vector3(transform.position.x, randomY, 0), Quaternion.identity);
                 }
-                Score++;
+
+                if (gameManager.isBoss == false) Score++;
+
                 break;
         }
     }
