@@ -7,7 +7,7 @@ public class BossHealth : MonoBehaviour, IDamagable
     [SerializeField] float CurrentLife;
     [SerializeField] GameObject Tombstone; // 적 캐릭터가 사망 시 생성할 무덤 객체
     [SerializeField] Slider bossSlider; // 보스 캐릭터의 체력바
-
+    [SerializeField] GameObject hitEffect; // 피격 이펙트
     public GameManager gameManager;
     void Start()
     {
@@ -18,6 +18,11 @@ public class BossHealth : MonoBehaviour, IDamagable
 
     public void Damage(float damage)
     {
+        if(hitEffect!=null) // 피격 이펙트가 할당되어 있다면 이펙트를 생성 
+        {
+            Instantiate(hitEffect, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+        }
+
         CurrentLife -= damage;
 
         if(CurrentLife <= 0)

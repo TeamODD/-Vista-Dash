@@ -168,3 +168,4 @@ MonoBehaviour:
   MeleeDamage: 0
   Tombstone: {fileID: 0}
   dropAmmo: 10
+  hitEffect: {fileID: 3779674461425231005, guid: 99f4c1d1e506b4d8da70c4515309dec0, type: 3}
