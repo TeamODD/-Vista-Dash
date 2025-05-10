@@ -102,8 +102,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e42ab0d6a8154b42b896777efeb9268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameManager: {fileID: 0}
   direction: 0
-  leftSpeed: 10
+  leftSpeed: 7
 --- !u!58 &597476782031077257
 CircleCollider2D:
   m_ObjectHideFlags: 0

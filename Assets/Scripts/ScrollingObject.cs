@@ -4,8 +4,8 @@ using UnityEngine;
 public class ScrollingObject : MonoBehaviour
 {
     public GameManager GameManager;
-    [SerializeField] enum MoveDirection { Left, Right, Up, Down, LeftUP, LeftDown }
-    [SerializeField] MoveDirection direction = MoveDirection.Left;
+    public enum MoveDirection { Left, Right, Up, Down, LeftUP, LeftDown }
+    public MoveDirection direction = MoveDirection.Left;
     [SerializeField] float leftSpeed = 10.0f;
 
     public void UpdateSpeed(float newspeed)
