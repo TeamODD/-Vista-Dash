@@ -8,6 +8,7 @@ TagManager:
   - Background
   - makeBullet
   - Platform
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX

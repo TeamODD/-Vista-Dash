@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Vista-Dash.sln"
+    "dotnet.defaultSolution": "-Vista-Dash.sln"
 }
