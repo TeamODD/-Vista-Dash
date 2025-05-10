@@ -37,7 +37,7 @@ public class PlayerHealth : MonoBehaviour, IDamagable, IHealable
 
     private IEnumerator RestHitAnimation()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         hitAnimator.SetBool("isAttacked" , false);
     }
 
