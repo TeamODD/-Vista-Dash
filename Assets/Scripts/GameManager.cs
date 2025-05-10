@@ -21,6 +21,16 @@ public class GameManager : MonoBehaviour
     public float CurrentSpeed = 10.0f;
 
     public bool isBoss;
+
+    public void spawnBoss()
+    {
+        isBoss = true;
+    }
+
+    public void removeBoss()
+    {
+        isBoss = false;
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
