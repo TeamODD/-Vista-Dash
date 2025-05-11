@@ -169,7 +169,10 @@ MonoBehaviour:
   CurrentLife: 0
   Tombstone: {fileID: 0}
   bossSlider: {fileID: 0}
-  hitEffect: {fileID: 3779674461425231005, guid: 99f4c1d1e506b4d8da70c4515309dec0, type: 3}
+  hitEffect1: {fileID: 3779674461425231005, guid: 99f4c1d1e506b4d8da70c4515309dec0, type: 3}
+  hitEffect2: {fileID: 3779674461425231005, guid: 69139967b3dd94bacb75f1dce60100dc, type: 3}
+  hitEffect3: {fileID: 3779674461425231005, guid: a90141a82d54f4207ba17ae92a81ac12, type: 3}
+  hitEffect4: {fileID: 3779674461425231005, guid: dc8f0e44f64824afaadd0408598b6c9c, type: 3}
   gameManager: {fileID: 0}
 --- !u!114 &6233862027093996584
 MonoBehaviour:

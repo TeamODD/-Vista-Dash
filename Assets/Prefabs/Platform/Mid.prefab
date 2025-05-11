@@ -138,7 +138,7 @@ MonoBehaviour:
   Enemy2_1: {fileID: 496790817925590269, guid: 99bcbd309140da147a1e1d9679bfcb86, type: 3}
   Enemy2_2: {fileID: 9072191111468532722, guid: 3e6202a71358552439fb8020f341c6a3, type: 3}
   healItem: {fileID: 2613201624500429772, guid: dc9103690f4c042f5ae9cf592e7acbbd, type: 3}
-  ammoItem: {fileID: 2613201624500429772, guid: dc9103690f4c042f5ae9cf592e7acbbd, type: 3}
+  ammoItem: {fileID: 2613201624500429772, guid: 34220989abe4346b398361b05fd23c44, type: 3}
   spawnPivot: {fileID: 8132054619485897219}
 --- !u!61 &-1791170092064182046
 BoxCollider2D:

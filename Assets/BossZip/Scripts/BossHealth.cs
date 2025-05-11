@@ -7,7 +7,10 @@ public class BossHealth : MonoBehaviour, IDamagable
     [SerializeField] float CurrentLife;
     [SerializeField] GameObject Tombstone; // 적 캐릭터가 사망 시 생성할 무덤 객체
     [SerializeField] Slider bossSlider; // 보스 캐릭터의 체력바
-    [SerializeField] GameObject hitEffect; // 피격 이펙트
+    [SerializeField] GameObject hitEffect1; // 피격 이펙트 1
+    [SerializeField] GameObject hitEffect2; // 피격 이펙트 2
+    [SerializeField] GameObject hitEffect3; // 피격 이펙트 3
+    [SerializeField] GameObject hitEffect4; // 피격 이펙트 4
     public GameManager gameManager;
     void Start()
     {
@@ -18,9 +21,22 @@ public class BossHealth : MonoBehaviour, IDamagable
 
     public void Damage(float damage)
     {
-        if(hitEffect!=null) // 피격 이펙트가 할당되어 있다면 이펙트를 생성 
+        int rannum = Random.Range(1, 5); // 1부터 4까지 랜덤으로 생성
+
+        switch(rannum)
         {
-            Instantiate(hitEffect, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+            case 1:
+                Instantiate(hitEffect1, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+                break;
+            case 2:
+                Instantiate(hitEffect2, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+                break;
+            case 3:
+                Instantiate(hitEffect3, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+                break;
+            case 4:
+                Instantiate(hitEffect4, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+                break;
         }
 
         CurrentLife -= damage;

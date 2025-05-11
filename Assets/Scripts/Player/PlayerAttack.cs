@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class PlayerAttack : MonoBehaviour
 {
+    AudioSource audioSource; // 오디오 소스
+    [SerializeField] AudioClip ammoGetSound; // 탄환을 획득했을 때 재생할 사운드
     [SerializeField] GameObject bulletPrefab; // 총알 프리팹
     [SerializeField] GameObject noAmmoAlert; // 탄환이 없을 때 활성화 할 경고창 
     [SerializeField] Transform bulletPoint; // 총알 발사 위치
@@ -39,6 +41,11 @@ public class PlayerAttack : MonoBehaviour
             Debug.Log("총알 발사 불가");
         }
     }
+    
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>(); 
+    }
 
     void Update()
     {
@@ -55,6 +62,12 @@ public class PlayerAttack : MonoBehaviour
         }
 
         updateAmmo();
+    }
+
+    public void addAmmo(int ammo)
+    {
+        audioSource.PlayOneShot(ammoGetSound); // 탄환 획득 사운드 
+        bulletCount+=ammo; // 탄환을 추가
     }
 
     void updateAmmo()
