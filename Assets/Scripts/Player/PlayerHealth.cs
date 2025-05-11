@@ -38,19 +38,13 @@ public class PlayerHealth : MonoBehaviour, IDamagable, IHealable
         Debug.Log(damage + "만큼 피해를 입음");
         CurrentHealth -= damage;
 
-        hitAnimator.SetBool("isAttacked", true);
-        StartCoroutine(RestHitAnimation());
+        hitAnimator.SetTrigger("Attacked"); 
         if (CurrentHealth <= 0) // 체력이 0이하라면 사망처리
         {
             Die();
         }
     }
 
-    private IEnumerator RestHitAnimation()
-    {
-        yield return new WaitForSeconds(0.1f);
-        hitAnimator.SetBool("isAttacked" , false);
-    }
 
     public void Heal(float heal) // 치유를 하는 인터페이스 함수
     {
