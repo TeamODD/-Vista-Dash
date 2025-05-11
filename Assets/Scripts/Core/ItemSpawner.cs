@@ -1,5 +1,3 @@
-using UnityEditor.Build.Content;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class ItemSpawner : MonoBehaviour

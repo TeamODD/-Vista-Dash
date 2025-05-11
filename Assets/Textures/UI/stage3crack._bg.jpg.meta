@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      stage3crack._bg_0: -5650734792125360953
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
