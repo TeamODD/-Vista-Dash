@@ -166,6 +166,6 @@ MonoBehaviour:
   InitLife: 1
   CurrentLife: 0
   MeleeDamage: 0
-  Tombstone: {fileID: 0}
+  Tombstone: {fileID: 7594751414524792298, guid: ca753e8e64fc9492cab935f4860956a4, type: 3}
   dropAmmo: 10
   hitEffect: {fileID: 3779674461425231005, guid: 99f4c1d1e506b4d8da70c4515309dec0, type: 3}

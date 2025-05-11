@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1691170320188810641}
   - component: {fileID: 1634471597478135411}
   - component: {fileID: 918024406320379698}
-  - component: {fileID: 8347581144434995806}
   - component: {fileID: 7732516807504091051}
   - component: {fileID: 2780065597693462643}
   m_Layer: 0
@@ -153,20 +152,6 @@ MonoBehaviour:
   GameManager: {fileID: 0}
   direction: 0
   leftSpeed: 10
---- !u!114 &8347581144434995806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1876269738864779870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48f00f8108630c5458ed465e40a1b6fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentLife: 1
-  bulletDamage: 1
 --- !u!114 &7732516807504091051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +167,7 @@ MonoBehaviour:
   InitLife: 1
   CurrentLife: 0
   MeleeDamage: 0
-  Tombstone: {fileID: 0}
+  Tombstone: {fileID: 7594751414524792298, guid: ca753e8e64fc9492cab935f4860956a4, type: 3}
   dropAmmo: 10
   hitEffect: {fileID: 3779674461425231005, guid: 99f4c1d1e506b4d8da70c4515309dec0, type: 3}
 --- !u!114 &2780065597693462643

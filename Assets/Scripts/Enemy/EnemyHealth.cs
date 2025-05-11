@@ -29,7 +29,7 @@ public class EnemyHealth : MonoBehaviour, IDamagable
     {
         if(hitEffect!=null) // 피격 이펙트가 할당되어 있다면 이펙트를 생성 
         {
-            Instantiate(hitEffect, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+            //Instantiate(hitEffect, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
         }
         
         CurrentLife -= damage;
@@ -40,13 +40,19 @@ public class EnemyHealth : MonoBehaviour, IDamagable
 
             playerAttack.bulletCount += dropAmmo; // 플레이어에게 탄환을 충전한다.
 
-            Invoke("Die", 0.1f); // 사망처리 지연
+            if(Tombstone!=null) // 묘비 객체가 할당되어 있다면
+            {
+                Instantiate(Tombstone, gameObject.transform.position, Quaternion.identity);
+            }
+
+            //Invoke("Die", 0.1f); // 사망처리 지연
+            Die();
         }
     }
 
     void Die()
     {
-
         Destroy(gameObject); // 스스로를 파괴
     }
+
 }
