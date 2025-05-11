@@ -1,9 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
-public class BlasterPattern : MonoBehaviour
+public class BlasterPattern3 : MonoBehaviour
 {
     [SerializeField] GameObject Blaster; // 블래스터 공격 객체 
+    [SerializeField] GameObject errorAtack; // 에러 화면 방해 공격 
     [SerializeField] Transform BlasterPivot; // 블래스터가 생성될 위치
     PlayerMovement playerMovement;
     
@@ -32,7 +33,9 @@ public class BlasterPattern : MonoBehaviour
         BlasterFollowingPlayer();
         yield return new WaitForSeconds(1.5f);
         BlasterFollowingPlayer();
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(6f);
+
+        ErrorAttack();
 
         defaultBlaster(-4);
         yield return new WaitForSeconds(0.3f);
@@ -60,5 +63,10 @@ public class BlasterPattern : MonoBehaviour
     void BlasterFollowingPlayer()
     {
         Instantiate(Blaster, new Vector3(BlasterPivot.position.x, playerMovement.transform.position.y, BlasterPivot.position.z), Quaternion.identity);        
+    }
+
+    void ErrorAttack()
+    {
+        Instantiate(errorAtack, Vector3.zero, Quaternion.identity);
     }
 }

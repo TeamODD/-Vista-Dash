@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Blaster: {fileID: 1700176702447145701, guid: a910c432d4fee4d8c901088e67fdb7d8, type: 3}
+  errorAtack: {fileID: 8089585537399803648, guid: 5818ae42b6ed54f2285a89e315763356, type: 3}
   BlasterPivot: {fileID: 159034748759945112}
 --- !u!114 &5369125302307599178
 MonoBehaviour:
