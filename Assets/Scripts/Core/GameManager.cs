@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour
         Stage1_2.SetActive(true);
         Stage2_1.SetActive(false);
         Stage2_2.SetActive(false);
+        Stage3_1.SetActive(false);
+        Stage3_2.SetActive(false);
        
     }
 
@@ -57,6 +59,8 @@ public class GameManager : MonoBehaviour
             Stage1_2.SetActive(false);
             Stage2_1.SetActive(true);
             Stage2_2.SetActive(true);
+            Stage3_1.SetActive(false);
+            Stage3_2.SetActive(false);
             Debug.Log("스테이지2 배경 켜짐");
             CurrentStage = 2;
             /* 
@@ -67,6 +71,12 @@ public class GameManager : MonoBehaviour
         }
         else if (CurrentStage == 2 && CurrentScore >= 20) // 3�������� ���Խ�
         {
+            Stage1_1.SetActive(false);
+            Stage1_2.SetActive(false);
+            Stage2_1.SetActive(false);
+            Stage2_2.SetActive(false);
+            Stage3_1.SetActive(true);
+            Stage3_2.SetActive(true);
             CurrentStage = 3;
             /*
             CurrentSpeed = CurrentSpeed * Stage3Multiple; // 1.5�� == 18f

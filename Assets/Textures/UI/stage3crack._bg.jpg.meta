@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f1a307b0ded5c4eaca648b36e4775690
+guid: 5dd0c4fe45bd87445a3b40cfa935c2fe
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5819773988111746487
-    second: startMessageTest_0
+      213: -5650734792125360953
+    second: stage3crack._bg_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: startMessageTest_0
+      name: stage3crack._bg_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 100
+        width: 6002
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7b585729b9df3c050800000000000000
-      internalID: 5819773988111746487
+      spriteID: 7c45d6b35ae8491b0800000000000000
+      internalID: -5650734792125360953
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      startMessageTest_0: 5819773988111746487
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
