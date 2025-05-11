@@ -25,15 +25,18 @@ public class DecoSpawner : MonoBehaviour
     [SerializeField] GameObject Deco3_4;
     void OnEnable()
     {
+        GameManager = FindAnyObjectByType<GameManager>();
+        
         if (GameManager != null) 
         {
+            Debug.Log("Deco Spawner 게임 매니저 참조 완료");
             Stage = GameManager.CurrentStage; 
 
             spawnDeco(Stage); 
         }
         else
         {
-            Debug.Log("게임 매니저 참조 오류");
+            Debug.Log("DecoSpawner 게임 매니저 참조 오류");
         }
     }
 

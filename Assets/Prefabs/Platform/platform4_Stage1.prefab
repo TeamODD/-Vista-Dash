@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9151613936617190580}
   - component: {fileID: 3037067259934026861}
   m_Layer: 0
-  m_Name: platform4
+  m_Name: platform4_Stage1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,6 +59,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9151613936617190580}
     m_Modifications:
+    - target: {fileID: -6444745322042730968, guid: 2869dd1cfbdf90f478a7ebf9bed3b4c5, type: 3}
+      propertyPath: Deco2_1
+      value: 
+      objectReference: {fileID: 8227800773842521420, guid: 60bbed78313bd468d9c4e472b09578e3, type: 3}
     - target: {fileID: -1791170092064182046, guid: 2869dd1cfbdf90f478a7ebf9bed3b4c5, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 5.36

@@ -104,7 +104,7 @@ public class ItemSpawner : MonoBehaviour
 
     void OnEnable()
     {
-        spawnEnemy(2); // �� ��ü�� ���� ( ����׿� �Ŵ��� ���� )
+        GameManager = FindAnyObjectByType<GameManager>();
 
         if (GameManager != null) // ���� �Ŵ����� ���������� �����ߴٸ�
         {
@@ -114,7 +114,7 @@ public class ItemSpawner : MonoBehaviour
         }
         else
         {
-            Debug.Log("���� �Ŵ��� ���� ����");
+            Debug.Log("ItemSpawner 게임 매니저 참조 오류");
         }
     }
 

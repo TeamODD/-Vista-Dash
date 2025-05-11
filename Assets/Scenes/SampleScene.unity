@@ -3788,7 +3788,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793905699}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -3845,7 +3845,7 @@ Transform:
   m_GameObject: {fileID: 1793905699}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.51, y: -0.6572386, z: -0.026926894}
+  m_LocalPosition: {x: -1.136, y: -0.6572386, z: -0.026926894}
   m_LocalScale: {x: 1, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4907,6 +4907,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartingPlatform_0
       objectReference: {fileID: 0}
+    - target: {fileID: 4061657355271470552, guid: b639eea28edfd458f849df4ef86e8ee0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4371820455698315210, guid: b639eea28edfd458f849df4ef86e8ee0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.7
@@ -4949,7 +4953,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4614044536646239468, guid: b639eea28edfd458f849df4ef86e8ee0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

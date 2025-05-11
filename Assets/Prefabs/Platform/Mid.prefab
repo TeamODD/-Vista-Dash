@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2770176818529586044}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.04, z: 0}
+  m_LocalPosition: {x: 0, y: 5.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -203,11 +203,11 @@ MonoBehaviour:
   Deco1_2: {fileID: 7661307223886560344, guid: 9acdda9a3f193461d8949c437503c724, type: 3}
   Deco1_3: {fileID: 8164040472557800628, guid: 70729f10e60364b5b863e5a892638637, type: 3}
   Deco1_4: {fileID: 5938021925982994238, guid: 0e3cb97819e014b83aaa2e9ad81177ad, type: 3}
-  Deco2_1: {fileID: 0}
-  Deco2_2: {fileID: 0}
-  Deco2_3: {fileID: 0}
-  Deco2_4: {fileID: 0}
-  Deco3_1: {fileID: 0}
-  Deco3_2: {fileID: 0}
-  Deco3_3: {fileID: 0}
-  Deco3_4: {fileID: 0}
+  Deco2_1: {fileID: 8227800773842521420, guid: 60bbed78313bd468d9c4e472b09578e3, type: 3}
+  Deco2_2: {fileID: 7661307223886560344, guid: 9acdda9a3f193461d8949c437503c724, type: 3}
+  Deco2_3: {fileID: 8164040472557800628, guid: 70729f10e60364b5b863e5a892638637, type: 3}
+  Deco2_4: {fileID: 5938021925982994238, guid: 0e3cb97819e014b83aaa2e9ad81177ad, type: 3}
+  Deco3_1: {fileID: 8227800773842521420, guid: 60bbed78313bd468d9c4e472b09578e3, type: 3}
+  Deco3_2: {fileID: 7661307223886560344, guid: 9acdda9a3f193461d8949c437503c724, type: 3}
+  Deco3_3: {fileID: 8164040472557800628, guid: 70729f10e60364b5b863e5a892638637, type: 3}
+  Deco3_4: {fileID: 5938021925982994238, guid: 0e3cb97819e014b83aaa2e9ad81177ad, type: 3}

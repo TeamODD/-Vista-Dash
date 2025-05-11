@@ -11,8 +11,7 @@ public class HealItem : MonoBehaviour
         if(healable!=null) // 회복 인터페이스가 존재한다면
         {
             healable.Heal(heal); // 회복량 만큼 회복 함수 실행
-        }
-
-        Destroy(gameObject); // 스스로를 파괴
+            Destroy(gameObject); // 스스로를 파괴
+        }  
     }
 }
