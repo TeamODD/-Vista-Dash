@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1634471597478135411}
   - component: {fileID: 918024406320379698}
   - component: {fileID: 7732516807504091051}
-  - component: {fileID: 2780065597693462643}
+  - component: {fileID: 5352334373370647990}
   m_Layer: 0
   m_Name: Enemy1_1_0
   m_TagString: Untagged
@@ -170,7 +170,7 @@ MonoBehaviour:
   Tombstone: {fileID: 7594751414524792298, guid: ca753e8e64fc9492cab935f4860956a4, type: 3}
   dropAmmo: 3
   hitEffect: {fileID: 3779674461425231005, guid: 99f4c1d1e506b4d8da70c4515309dec0, type: 3}
---- !u!114 &2780065597693462643
+--- !u!114 &5352334373370647990
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -179,11 +179,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1876269738864779870}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a443e7947ddc38b4386a370f1980b978, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c8fc6fca114a5f40a00901c6da99d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBullet1: {fileID: 21155469199542169, guid: a5e50c711df54bf4a9a40b835b05e044, type: 3}
-  enemyBullet2: {fileID: 21155469199542169, guid: a5e50c711df54bf4a9a40b835b05e044, type: 3}
-  enemyBullet3: {fileID: 21155469199542169, guid: a5e50c711df54bf4a9a40b835b05e044, type: 3}
+  enemyBullet: {fileID: 21155469199542169, guid: a5e50c711df54bf4a9a40b835b05e044, type: 3}
   scrollingObject: {fileID: 0}
   fireRate: 1
