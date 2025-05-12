@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public GameObject Stage3_1;
     public GameObject Stage3_2;
 
+    public GameObject testBoss;
+
     public PlatformSpawner Spawner; //PlatformSpawner �� Spawner�� �ҷ���
     public ScrollingObject scrollingObject;
 
@@ -25,7 +27,7 @@ public class GameManager : MonoBehaviour
     public float CurrentSpeed = 10.0f;
 
     public bool isBoss = false;
-
+    public int bosslog = 0;
     public void SpawnBoss()
     {
         isBoss = true;
@@ -61,8 +63,8 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         int CurrentScore = Spawner.GetScore(); // PlatformSpawner���� ���� ���ھ� �޾ƿ�
-        Debug.Log("스코어" +  CurrentScore + "스테이지" + CurrentStage + "속도" + CurrentSpeed);
-        if ((CurrentStage == 1 && CurrentScore >= 30) && Spawner.PlatformCount >= 15) // 2�������� ���Խ�
+        Debug.Log("스코어" +  CurrentScore + "스테이지" + CurrentStage + "속도" + CurrentSpeed + "보스로그" + bosslog);
+        if (((CurrentStage == 1 && CurrentScore >= 30) && Spawner.PlatformCount >= 30) && bosslog == 1)  // 2�������� ���Խ�
         {
             //stage1Music.Stop();
             //stage2Music.Play();
@@ -80,7 +82,7 @@ public class GameManager : MonoBehaviour
             scrollingObject.UpdateSpeed(CurrentSpeed); // ��ũ�Ѹ� �Ѵ� �ӵ� ����
             */
         }
-        else if ((CurrentStage == 2 && CurrentScore >= 60) && Spawner.PlatformCount >= 30) // 3�������� ���Խ�
+        else if (((CurrentStage == 2 && CurrentScore >= 60) && Spawner.PlatformCount >= 60) && bosslog == 2) // 3�������� ���Խ�
         {
             //stage2Music.Stop();
             //stage3Music.Play();
@@ -96,6 +98,25 @@ public class GameManager : MonoBehaviour
             Spawner.UpdatePlatformSpeed(CurrentSpeed);
             scrollingObject.UpdateSpeed(CurrentSpeed);
             */
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (((CurrentStage == 1 && Spawner.PlatformCount >= 15) && isBoss == false) && bosslog == 0)
+        {
+            testBoss.SetActive(true);
+            bosslog++;
+        }
+        else if (((CurrentStage == 2 && Spawner.PlatformCount >= 45) && isBoss == false) && bosslog == 1)
+        {
+            testBoss.SetActive(true);
+            bosslog++;
+        }
+        else if (((CurrentStage == 3 && Spawner.PlatformCount >= 70)&&isBoss == false) && bosslog == 2)
+        {
+            testBoss.SetActive(true);
+            bosslog++;
         }
     }
 }

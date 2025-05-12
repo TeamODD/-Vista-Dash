@@ -983,6 +983,11 @@ Transform:
   - {fileID: 2043011163}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &454347716 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5321772251098312049, guid: d1428694b53f0471baa4173c810d0443, type: 3}
+  m_PrefabInstance: {fileID: 5701457622752626928}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &495633106
 GameObject:
   m_ObjectHideFlags: 0
@@ -4619,6 +4624,7 @@ MonoBehaviour:
   Stage2_2: {fileID: 527597674}
   Stage3_1: {fileID: 25358652}
   Stage3_2: {fileID: 128622692}
+  testBoss: {fileID: 454347716}
   Spawner: {fileID: 0}
   scrollingObject: {fileID: 0}
   stage1Music: {fileID: 0}
@@ -4629,6 +4635,7 @@ MonoBehaviour:
   Stage3Multiple: 1.5
   CurrentSpeed: 10
   isBoss: 0
+  bosslog: 0
 --- !u!4 &1961764820
 Transform:
   m_ObjectHideFlags: 0
@@ -5126,6 +5133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Score: 0
+  PlatformCount: 0
   PlatformPrefeb: {fileID: 0}
   ItemSpawner: {fileID: 0}
   gameManager: {fileID: 0}
@@ -5307,6 +5315,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestBoss
       objectReference: {fileID: 0}
+    - target: {fileID: 5321772251098312049, guid: d1428694b53f0471baa4173c810d0443, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5369125302307599178, guid: d1428694b53f0471baa4173c810d0443, type: 3}
+      propertyPath: testBoss
+      value: 
+      objectReference: {fileID: 454347716}
     - target: {fileID: 6985456419114802791, guid: d1428694b53f0471baa4173c810d0443, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.09

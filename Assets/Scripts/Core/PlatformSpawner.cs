@@ -111,14 +111,14 @@ public class PlatformSpawner : MonoBehaviour
         if (gameManager != null)
         {
             CurrentStage = gameManager.CurrentStage;
-            Debug.Log("gamemanger 참조 성공" + CurrentStage);
+            //Debug.Log("gamemanger 참조 성공" + CurrentStage);
         }
 
         TimeSum += Time.deltaTime; // 초마다 더한다. 
 
         if (TimeSum >= SpawnDuration) // 스폰 주기를 채웠다면
         {
-            Debug.Log("플랫폼 생성!");
+            //Debug.Log("플랫폼 생성!");
             SpawnPlatform(CurrentStage); // 현재 스테이지의 정보를 주고 플랫폼 스폰 함수 호출
             TimeSum = 0f; // 다시 시간을 측정하기 시작
         }
