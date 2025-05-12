@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
 
     public PlatformSpawner Spawner; //PlatformSpawner �� Spawner�� �ҷ���
     public ScrollingObject scrollingObject;
-
     public AudioSource stage1Music;
     public AudioSource stage2Music;
     public AudioSource stage3Music;
