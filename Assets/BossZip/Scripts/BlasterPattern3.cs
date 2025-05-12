@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class BlasterPattern3 : MonoBehaviour
+public class BlasterPattern3 : MonoBehaviour, IAttackpattern
 {
     [SerializeField] GameObject Blaster; // 블래스터 공격 객체 
     [SerializeField] GameObject errorAtack; // 에러 화면 방해 공격 
