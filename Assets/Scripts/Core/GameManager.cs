@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
     {
         int CurrentScore = Spawner.GetScore(); // PlatformSpawner���� ���� ���ھ� �޾ƿ�
         Debug.Log("스코어" +  CurrentScore + "스테이지" + CurrentStage + "속도" + CurrentSpeed);
-        if (CurrentStage == 1 && CurrentScore >= 10) // 2�������� ���Խ�
+        if ((CurrentStage == 1 && CurrentScore >= 30) && Spawner.PlatformCount >= 15) // 2�������� ���Խ�
         {
             //stage1Music.Stop();
             //stage2Music.Play();
@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
             scrollingObject.UpdateSpeed(CurrentSpeed); // ��ũ�Ѹ� �Ѵ� �ӵ� ����
             */
         }
-        else if (CurrentStage == 2 && CurrentScore >= 20) // 3�������� ���Խ�
+        else if ((CurrentStage == 2 && CurrentScore >= 60) && Spawner.PlatformCount >= 30) // 3�������� ���Խ�
         {
             //stage2Music.Stop();
             //stage3Music.Play();
