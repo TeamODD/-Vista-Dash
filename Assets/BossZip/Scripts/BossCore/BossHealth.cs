@@ -3,8 +3,8 @@ using UnityEngine.UI;
 
 public class BossHealth : MonoBehaviour, IDamagable
 {
-    [SerializeField] float InitLife = 100;
-    [SerializeField] float CurrentLife;
+    public float InitLife = 100;
+    public float CurrentLife;
     [SerializeField] GameObject Tombstone; // 적 캐릭터가 사망 시 생성할 무덤 객체
     [SerializeField] Slider bossSlider; // 보스 캐릭터의 체력바
     [SerializeField] GameObject hitEffect1; // 피격 이펙트 1
