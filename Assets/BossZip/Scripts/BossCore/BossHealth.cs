@@ -50,6 +50,7 @@ public class BossHealth : MonoBehaviour, IDamagable
     void Die()
     {
         Instantiate(Tombstone, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+        gameManager.RemoveBoss();
         Destroy(gameObject); // 스스로를 파괴
     }
 

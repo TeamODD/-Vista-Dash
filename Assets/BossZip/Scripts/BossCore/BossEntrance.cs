@@ -10,11 +10,14 @@ public class BossEntrance : MonoBehaviour
     private float elapsedTime = 0f;
     private bool isMoving = false;
     [SerializeField] BossMovement movement;
+
+    public GameManager gameManager;
     void OnEnable()
     {
         startPosition = transform.position;
         elapsedTime = 0f;
         isMoving = true;
+        gameManager.SpawnBoss();
     }
 
     void Update()
