@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public GameObject Stage3_1;
     public GameObject Stage3_2;
 
+    //public GameObject cutScene;
+
     public GameObject testBoss;
 
     public PlatformSpawner Spawner; //PlatformSpawner �� Spawner�� �ҷ���
@@ -27,6 +29,12 @@ public class GameManager : MonoBehaviour
 
     public bool isBoss = false;
     public int bosslog = 0;
+
+    //public float cutSceneSeconds = 10f; 
+    //public float cutSceneSpeed = 4f;  //컷신 움직이는 속도
+
+    //private bool cutSceneCount = false;
+
     public void SpawnBoss()
     {
         isBoss = true;
@@ -46,6 +54,7 @@ public class GameManager : MonoBehaviour
         stage2Music = GetComponent<AudioSource>();
         stage3Music = GetComponent<AudioSource>();
 
+
         //stage1Music.Play();
         //stage3Music.Stop();
         Stage1_1.SetActive(true);
@@ -55,12 +64,12 @@ public class GameManager : MonoBehaviour
         Stage3_1.SetActive(false);
         Stage3_2.SetActive(false);
 
-       
     }
 
     // Update is called once per frame
     void Update()
     {
+
         int CurrentScore = Spawner.GetScore(); // PlatformSpawner���� ���� ���ھ� �޾ƿ�
         Debug.Log("스코어" +  CurrentScore + "스테이지" + CurrentStage + "속도" + CurrentSpeed + "보스로그" + bosslog);
         if (((CurrentStage == 1 && CurrentScore >= 30) && Spawner.PlatformCount >= 30) && bosslog == 1)  // 2�������� ���Խ�
