@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 572829362244510447}
   - component: {fileID: -4344468875504561929}
   m_Layer: 0
-  m_Name: testTombstoneEnemy_0
+  m_Name: Tombstone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 444027921274412113, guid: 8ddc70aaa548c4461896d869d8de55b1, type: 3}
+  m_Sprite: {fileID: -9192638271177797499, guid: 9e45bf0704d3a453f951936af126ca34, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

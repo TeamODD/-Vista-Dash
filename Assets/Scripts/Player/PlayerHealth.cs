@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour, IDamagable, IHealable
     [SerializeField] float maxHealth; // 체력 최대값 100 
     [SerializeField] float CurrentHealth; // 현재 체력 
     [SerializeField] Slider slider;
-
+    [SerializeField] GameObject damageEffect; // 대미지 이펙트
     Animator hitAnimator;
     // 사운드 컴포넌트와 사운드 클립들
     AudioSource audioSource; // 사운드를 재생 할 오디오 소스 컴포넌트
@@ -30,15 +30,14 @@ public class PlayerHealth : MonoBehaviour, IDamagable, IHealable
 
     public void Damage(float damage) // 데미지를 입는 인터페이스 함수
     {
-        if (!audioSource.isPlaying) // 사운드가 재생 중이 아닐 때만 대미지 사운드 재생 ( 한 번에 여러 개의 공격을 받았을 떄 겹치게 들리는 것을 방지 )
-        {
-            audioSource.PlayOneShot(damageSound);
-        }
-
+        //damageEffect.SetActive(true); // 대미지 이펙트 활성화
         Debug.Log(damage + "만큼 피해를 입음");
         CurrentHealth -= damage;
 
+        // 대미지 애니메이션 재생과 사운드 재생
         hitAnimator.SetTrigger("Attacked"); 
+        audioSource.PlayOneShot(damageSound);
+
         if (CurrentHealth <= 0) // 체력이 0이하라면 사망처리
         {
             Die();
