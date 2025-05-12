@@ -182,6 +182,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a443e7947ddc38b4386a370f1980b978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 21155469199542169, guid: a5e50c711df54bf4a9a40b835b05e044, type: 3}
+  enemyBullet1: {fileID: 21155469199542169, guid: a5e50c711df54bf4a9a40b835b05e044, type: 3}
+  enemyBullet2: {fileID: 0}
+  enemyBullet3: {fileID: 0}
   scrollingObject: {fileID: 0}
   fireRate: 1

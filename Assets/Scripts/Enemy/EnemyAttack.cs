@@ -4,7 +4,9 @@ using UnityEngine.UI;
 
 public class EnemyAttack : MonoBehaviour
 {
-    public GameObject enemyBullet;
+    public GameObject enemyBullet1;
+    public GameObject enemyBullet2;
+    public GameObject enemyBullet3;
     public ScrollingObject scrollingObject;
     public float fireRate = 1f;
 
@@ -16,7 +18,9 @@ public class EnemyAttack : MonoBehaviour
 
     void Fire()
     {
-        Instantiate(enemyBullet, transform.position, Quaternion.identity);
+        Instantiate(enemyBullet1, transform.position, Quaternion.identity);
+        Instantiate(enemyBullet2, transform.position, Quaternion.identity);
+        Instantiate(enemyBullet3, transform.position, Quaternion.identity);
         Debug.Log("위치" + scrollingObject.direction + "sssssssssssssssssssssssssssssssss");
     }
 }

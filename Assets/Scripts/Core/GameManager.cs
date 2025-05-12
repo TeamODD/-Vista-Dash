@@ -14,6 +14,10 @@ public class GameManager : MonoBehaviour
     public PlatformSpawner Spawner; //PlatformSpawner �� Spawner�� �ҷ���
     public ScrollingObject scrollingObject;
 
+    public AudioSource stage1Music;
+    public AudioSource stage2Music;
+    public AudioSource stage3Music;
+
     public int CurrentStage = 1; //���� ���������� = 1
 
     public float Stage2Multiple = 1.2f;
@@ -37,14 +41,19 @@ public class GameManager : MonoBehaviour
         Spawner = FindAnyObjectByType<PlatformSpawner>();
         Spawner.UpdatePlatformSpeed(CurrentSpeed); // PlatformSpawner�� Speed�� ���� �ӵ��� ����
         scrollingObject = FindAnyObjectByType<ScrollingObject>();
-    
-      
+        stage1Music = GetComponent<AudioSource>();
+        stage2Music = GetComponent<AudioSource>();
+        stage3Music = GetComponent<AudioSource>();
+
+        //stage1Music.Play();
+        //stage3Music.Stop();
         Stage1_1.SetActive(true);
         Stage1_2.SetActive(true);
         Stage2_1.SetActive(false);
         Stage2_2.SetActive(false);
         Stage3_1.SetActive(false);
         Stage3_2.SetActive(false);
+
        
     }
 
@@ -55,6 +64,8 @@ public class GameManager : MonoBehaviour
         Debug.Log("스코어" +  CurrentScore + "스테이지" + CurrentStage + "속도" + CurrentSpeed);
         if (CurrentStage == 1 && CurrentScore >= 10) // 2�������� ���Խ�
         {
+            //stage1Music.Stop();
+            //stage2Music.Play();
             Stage1_1.SetActive(false);
             Stage1_2.SetActive(false);
             Stage2_1.SetActive(true);
@@ -71,6 +82,8 @@ public class GameManager : MonoBehaviour
         }
         else if (CurrentStage == 2 && CurrentScore >= 20) // 3�������� ���Խ�
         {
+            //stage2Music.Stop();
+            //stage3Music.Play();
             Stage1_1.SetActive(false);
             Stage1_2.SetActive(false);
             Stage2_1.SetActive(false);
