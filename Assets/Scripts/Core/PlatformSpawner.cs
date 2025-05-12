@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlatformSpawner : MonoBehaviour
 {
     public int Score = 0; //스코어 초기값 0
+    public int PlatformCount = 0;
     public GameObject PlatformPrefeb;
     public ItemSpawner ItemSpawner;
     public GameManager gameManager;
@@ -41,7 +42,11 @@ public class PlatformSpawner : MonoBehaviour
                     Instantiate(platform1_2, new Vector3(transform.position.x, randomY, 0), Quaternion.identity);
                 }
 
-                if (gameManager.isBoss == false) Score++;
+                if (gameManager.isBoss == false)
+                {
+                    Score++;
+                    PlatformCount++;
+                }
                 
                 break;
             case 2:
@@ -54,8 +59,11 @@ public class PlatformSpawner : MonoBehaviour
                     Instantiate(platform2_2, new Vector3(transform.position.x, randomY, 0), Quaternion.identity);
                 }
 
-                if (gameManager.isBoss == false) Score++;
-
+                if (gameManager.isBoss == false)
+                {
+                    Score++;
+                    PlatformCount++;
+                }
                 break;
             case 3:
                 if (randnum == 1)
@@ -67,8 +75,11 @@ public class PlatformSpawner : MonoBehaviour
                     Instantiate(platform3_2, new Vector3(transform.position.x, randomY, 0), Quaternion.identity);
                 }
 
-                if (gameManager.isBoss == false) Score++;
-
+                if (gameManager.isBoss == false)
+                {
+                    Score++;
+                    PlatformCount++;
+                }
                 break;
         }
     }
