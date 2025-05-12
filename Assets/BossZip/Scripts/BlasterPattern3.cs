@@ -67,6 +67,6 @@ public class BlasterPattern3 : MonoBehaviour
 
     void ErrorAttack()
     {
-        Instantiate(errorAtack, Vector3.zero, Quaternion.identity);
+        Instantiate(errorAtack, new Vector3(1.7f, 0, 0), Quaternion.identity);
     }
 }
