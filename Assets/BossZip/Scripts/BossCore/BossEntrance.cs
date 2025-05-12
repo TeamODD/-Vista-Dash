@@ -14,6 +14,8 @@ public class BossEntrance : MonoBehaviour
     public GameManager gameManager;
     void OnEnable()
     {
+        gameManager = FindAnyObjectByType<GameManager>();
+        
         startPosition = transform.position;
         elapsedTime = 0f;
         isMoving = true;
