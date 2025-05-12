@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.028247843}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 13.717419}
+  m_LocalScale: {x: 1, y: 1, z: 13.717419}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6381346511830156993}
@@ -216,7 +216,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1
+  m_Radius: 3.5
 --- !u!114 &4860482927751069742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12416b8ad011a9349b3dcc37e90b9063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDamage: 100
+  bulletDamage: 1
 --- !u!114 &3178262507996490570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,7 +396,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.13, y: 0, z: -0.028247843}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 13.717419}
+  m_LocalScale: {x: 1, y: 1, z: 13.717419}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6381346511830156993}
