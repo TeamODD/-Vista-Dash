@@ -49,8 +49,7 @@ public class BossHealth : MonoBehaviour, IDamagable
 
     void Die()
     {
-        // 무덤 객체 생성할 로직
-        gameManager.RemoveBoss();
+        Instantiate(Tombstone, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
         Destroy(gameObject); // 스스로를 파괴
     }
 

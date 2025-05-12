@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6361221256622600000}
   - component: {fileID: 2707861803026066407}
   - component: {fileID: 7087704323901107171}
-  - component: {fileID: 4916903301610449523}
+  - component: {fileID: 2565408153677304081}
   m_Layer: 0
   m_Name: ErrorAttack
   m_TagString: Untagged
@@ -209,7 +209,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4916903301610449523
+--- !u!114 &2565408153677304081
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
