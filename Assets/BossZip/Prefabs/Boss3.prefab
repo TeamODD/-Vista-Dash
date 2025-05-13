@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitLife: 400
   CurrentLife: 0
-  Tombstone: {fileID: 7594751414524792298, guid: ca753e8e64fc9492cab935f4860956a4, type: 3}
+  Tombstone: {fileID: 7594751414524792298, guid: f8cd18f82dfcb4a4787faea347023482, type: 3}
   bossSlider: {fileID: 0}
   hitEffect1: {fileID: 3574355698507827061, guid: 27a012d4b7c604c7db8ac3facd1d31fd, type: 3}
   hitEffect2: {fileID: 4077409865847229745, guid: 8b855db25222943d68395e68bd45b736, type: 3}

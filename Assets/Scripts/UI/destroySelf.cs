@@ -3,6 +3,7 @@ using UnityEngine;
 public class destroySelf : MonoBehaviour
 {
     [SerializeField] float yForce; // y축으로 얼마만큼 튀어오를 지
+    [SerializeField] float seconds = 1f; // 몇 초 뒤 삭제
     Rigidbody2D rb;
     void Start()
     {
@@ -10,7 +11,7 @@ public class destroySelf : MonoBehaviour
 
         rb.AddForce(Vector2.up * yForce, ForceMode2D.Impulse); // y축으로 힘을 준다.
 
-        Invoke("DestroySelf", 1f);
+        Invoke("DestroySelf", seconds);
     }
 
     void DestroySelf()
