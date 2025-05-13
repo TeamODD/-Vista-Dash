@@ -11,4 +11,9 @@ public class StartCutSceneMenu : MonoBehaviour
             SceneManager.LoadScene("SampleScene");
         }    
     }
+
+    public void SkipCutscene()
+    {
+        SceneManager.LoadScene("SampleScene");   
+    }
 }
