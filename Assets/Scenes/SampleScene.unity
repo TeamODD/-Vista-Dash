@@ -5404,7 +5404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5321772251098312049, guid: d1428694b53f0471baa4173c810d0443, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5369125302307599178, guid: d1428694b53f0471baa4173c810d0443, type: 3}
       propertyPath: testBoss
