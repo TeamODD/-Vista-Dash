@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd35d7a702eb3ed4eac5739ff7622cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitLife: 1
+  InitLife: 2
   CurrentLife: 0
   MeleeDamage: 3
   Tombstone: {fileID: 7594751414524792298, guid: 668b773181293405387f346b0c927b25, type: 3}
