@@ -19,7 +19,7 @@ public class BlasterPattern1 : MonoBehaviour, IAttackpattern
         yield return new WaitForSeconds(3f);
 
         ErrorAttack();
-        yield return new WaitForSeconds(9f);
+        yield return new WaitForSeconds(7f);
 
         defaultBlaster(-5);
         yield return new WaitForSeconds(1f);
@@ -33,9 +33,32 @@ public class BlasterPattern1 : MonoBehaviour, IAttackpattern
         defaultBlaster(4);
         yield return new WaitForSeconds(1f);
         defaultBlaster(5);
+        yield return new WaitForSeconds(1f);
 
-        yield return new WaitForSeconds(3f);
-        StartCoroutine("blasterRoutine"); // 3초 쉬고 무한 반복
+        ErrorAttack();
+        yield return new WaitForSeconds(7f);
+        randomBlaster();
+        yield return new WaitForSeconds(0.5f);
+        randomBlaster();
+        yield return new WaitForSeconds(0.5f);
+        randomBlaster();
+        yield return new WaitForSeconds(0.5f);
+        randomBlaster();
+        yield return new WaitForSeconds(0.5f);
+        randomBlaster();
+        yield return new WaitForSeconds(0.5f);
+        randomBlaster();
+        yield return new WaitForSeconds(0.5f);
+
+        BlasterFollowingPlayer();
+        yield return new WaitForSeconds(1.5f);
+        BlasterFollowingPlayer();
+        yield return new WaitForSeconds(1.5f);
+        BlasterFollowingPlayer();
+        yield return new WaitForSeconds(1.5f);
+
+        yield return new WaitForSeconds(5f);
+        StartCoroutine("blasterRoutine"); // 5초 쉬고 무한 반복
     }
 
     void defaultBlaster(int yAxis) // -5부터 5사이

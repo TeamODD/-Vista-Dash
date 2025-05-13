@@ -98,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Easter Egg
-        if(Input.GetKeyDown(KeyCode.P))
+        if(Input.GetKeyDown(KeyCode.M) || Input.GetKeyDown(KeyCode.B))
         {
             easterEgg.SetActive(true);
         }

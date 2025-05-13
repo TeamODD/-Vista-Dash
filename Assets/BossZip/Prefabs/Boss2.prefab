@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 814b614ecb7d54a5fb6473f650e217a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitLife: 300
+  InitLife: 400
   CurrentLife: 0
   Tombstone: {fileID: 7594751414524792298, guid: ca753e8e64fc9492cab935f4860956a4, type: 3}
   bossSlider: {fileID: 0}
