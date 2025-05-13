@@ -53,8 +53,8 @@ public class BossHealth : MonoBehaviour, IDamagable
     {
         Instantiate(Tombstone, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
         gameManager.RemoveBoss();
-        //Destroy(gameObject); // 스스로를 파괴
-        testBoss.SetActive(false);
+        Destroy(gameObject); // 스스로를 파괴
+        //testBoss.SetActive(false);
     }
 
     void updateSlider() // 체력바를 갱신
