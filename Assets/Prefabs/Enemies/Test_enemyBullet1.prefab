@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLife: 1
-  bulletDamage: 15
+  bulletDamage: 3
 --- !u!82 &7038773191594412117
 AudioSource:
   m_ObjectHideFlags: 0

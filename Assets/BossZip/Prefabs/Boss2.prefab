@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 6985456419114802791}
   - component: {fileID: 6581090354629214641}
   - component: {fileID: 6659532358152796393}
-  - component: {fileID: 2276275877977624467}
   - component: {fileID: 5369125302307599178}
   - component: {fileID: 6233862027093996584}
   - component: {fileID: 2510937256619591624}
+  - component: {fileID: 526077535164192007}
   m_Layer: 0
-  m_Name: TestBoss
+  m_Name: Boss2
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139,21 +139,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.5233297, y: 3.6950219}
   m_EdgeRadius: 0
---- !u!114 &2276275877977624467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5321772251098312049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50738183f48724735b87f260539de782, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Blaster: {fileID: 1700176702447145701, guid: a910c432d4fee4d8c901088e67fdb7d8, type: 3}
-  errorAtack: {fileID: 8089585537399803648, guid: 5818ae42b6ed54f2285a89e315763356, type: 3}
-  BlasterPivot: {fileID: 159034748759945112}
 --- !u!114 &5369125302307599178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +160,7 @@ MonoBehaviour:
   hitEffect3: {fileID: 6195160704100416144, guid: 8ca3f5f1fb62d454d97e34e58c2ce498, type: 3}
   hitEffect4: {fileID: 3075389714419783922, guid: 9fbc19d22fa2d47b6a3859d3a5882f9c, type: 3}
   gameManager: {fileID: 0}
+  testBoss: {fileID: 0}
 --- !u!114 &6233862027093996584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,6 +189,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveDuration: 1
   movement: {fileID: 6233862027093996584}
+  gameManager: {fileID: 0}
+--- !u!114 &526077535164192007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5321772251098312049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8d460d1d270b41b482f521675ddb801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Blaster: {fileID: 1700176702447145701, guid: a910c432d4fee4d8c901088e67fdb7d8, type: 3}
+  errorAtack: {fileID: 8089585537399803648, guid: 5818ae42b6ed54f2285a89e315763356, type: 3}
+  BlasterPivot: {fileID: 159034748759945112}
 --- !u!1 &7664043769321904209
 GameObject:
   m_ObjectHideFlags: 0
