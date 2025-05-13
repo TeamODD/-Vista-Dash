@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 814b614ecb7d54a5fb6473f650e217a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitLife: 100
+  InitLife: 300
   CurrentLife: 0
   Tombstone: {fileID: 7594751414524792298, guid: ca753e8e64fc9492cab935f4860956a4, type: 3}
   bossSlider: {fileID: 0}
@@ -175,6 +175,7 @@ MonoBehaviour:
   hitEffect3: {fileID: 6195160704100416144, guid: 8ca3f5f1fb62d454d97e34e58c2ce498, type: 3}
   hitEffect4: {fileID: 3075389714419783922, guid: 9fbc19d22fa2d47b6a3859d3a5882f9c, type: 3}
   gameManager: {fileID: 0}
+  testBoss: {fileID: 0}
 --- !u!114 &6233862027093996584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,6 +204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveDuration: 1
   movement: {fileID: 6233862027093996584}
+  gameManager: {fileID: 0}
 --- !u!1 &7664043769321904209
 GameObject:
   m_ObjectHideFlags: 0

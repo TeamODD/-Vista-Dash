@@ -42,6 +42,22 @@ public class BlasterPattern2 : MonoBehaviour, IAttackpattern
         defaultBlaster(4);
         yield return new WaitForSeconds(0.3f);
 
+        ErrorAttack();
+        yield return new WaitForSeconds(6f);
+
+        randomBlaster();
+        yield return new WaitForSeconds(0.5f);
+        randomBlaster();
+        yield return new WaitForSeconds(0.5f);
+        randomBlaster();
+        yield return new WaitForSeconds(0.5f);
+        randomBlaster();
+        yield return new WaitForSeconds(0.5f);
+        randomBlaster();
+        yield return new WaitForSeconds(0.5f);
+        randomBlaster();
+        yield return new WaitForSeconds(0.5f);
+
         yield return new WaitForSeconds(3f);
         StartCoroutine("blasterRoutine"); // 3초 쉬고 무한 반복
     }
@@ -49,6 +65,13 @@ public class BlasterPattern2 : MonoBehaviour, IAttackpattern
     void defaultBlaster(int yAxis) // -5부터 5사이
     {
         Instantiate(Blaster, new Vector3(BlasterPivot.position.x, yAxis, BlasterPivot.position.z), Quaternion.identity);
+    }
+
+    void randomBlaster()
+    {
+        int rannum = Random.Range(-5, 6); 
+
+        Instantiate(Blaster, new Vector3(BlasterPivot.position.x, rannum, BlasterPivot.position.z), Quaternion.identity);
     }
 
     void BlasterFollowingPlayer()

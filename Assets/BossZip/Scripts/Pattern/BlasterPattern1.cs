@@ -34,13 +34,20 @@ public class BlasterPattern1 : MonoBehaviour, IAttackpattern
         yield return new WaitForSeconds(1f);
         defaultBlaster(5);
 
-        yield return new WaitForSeconds(5f);
-        StartCoroutine("blasterRoutine"); // 5초 쉬고 무한 반복
+        yield return new WaitForSeconds(3f);
+        StartCoroutine("blasterRoutine"); // 3초 쉬고 무한 반복
     }
 
     void defaultBlaster(int yAxis) // -5부터 5사이
     {
         Instantiate(Blaster, new Vector3(BlasterPivot.position.x, yAxis, BlasterPivot.position.z), Quaternion.identity);
+    }
+
+    void randomBlaster()
+    {
+        int rannum = Random.Range(-5, 6); 
+
+        Instantiate(Blaster, new Vector3(BlasterPivot.position.x, rannum, BlasterPivot.position.z), Quaternion.identity);
     }
 
     void BlasterFollowingPlayer()
