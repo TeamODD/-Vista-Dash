@@ -9,6 +9,7 @@ TagManager:
   - makeBullet
   - Platform
   - PlayerBullet
+  - NextStage
   layers:
   - Default
   - TransparentFX
