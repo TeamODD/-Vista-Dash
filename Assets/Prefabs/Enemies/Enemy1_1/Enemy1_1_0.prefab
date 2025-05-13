@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 918024406320379698}
   - component: {fileID: 7732516807504091051}
   - component: {fileID: 5352334373370647990}
+  - component: {fileID: -3914380234714695538}
   m_Layer: 0
   m_Name: Enemy1_1_0
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.94467133, y: -1.88413, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5007276879233255147, guid: 9a9fe9cc5178dfe46a32f44929f65fee, type: 3}
+  m_Sprite: {fileID: 5523664238581041570, guid: 4caf2535d4d9142e996ae757e5826047, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -125,17 +126,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.26172233}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 10}
+    oldSize: {x: 2.62, y: 3.4}
     newSize: {x: 5, y: 10}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5, y: 10}
+  m_Size: {x: 5, y: 4.0094714}
   m_EdgeRadius: 0
 --- !u!114 &918024406320379698
 MonoBehaviour:
@@ -167,7 +168,7 @@ MonoBehaviour:
   InitLife: 1
   CurrentLife: 0
   MeleeDamage: 3
-  Tombstone: {fileID: 7594751414524792298, guid: ca753e8e64fc9492cab935f4860956a4, type: 3}
+  Tombstone: {fileID: 7594751414524792298, guid: 668b773181293405387f346b0c927b25, type: 3}
   dropAmmo: 3
   hitEffect: {fileID: 3779674461425231005, guid: 99f4c1d1e506b4d8da70c4515309dec0, type: 3}
 --- !u!114 &5352334373370647990
@@ -182,6 +183,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c8fc6fca114a5f40a00901c6da99d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 21155469199542169, guid: a5e50c711df54bf4a9a40b835b05e044, type: 3}
+  enemyBullet: {fileID: 21155469199542169, guid: adc2cf4df09d1446da7df7c6ac2a7244, type: 3}
   scrollingObject: {fileID: 0}
   fireRate: 1
+--- !u!95 &-3914380234714695538
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876269738864779870}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c3c166be078c8499885746ba790f23dd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
