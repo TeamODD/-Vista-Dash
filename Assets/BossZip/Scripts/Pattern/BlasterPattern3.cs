@@ -33,8 +33,17 @@ public class BlasterPattern3 : MonoBehaviour, IAttackpattern
         yield return new WaitForSeconds(1.5f);
         BlasterFollowingPlayer();
         yield return new WaitForSeconds(1.5f);
-        BlasterFollowingPlayer();
-        yield return new WaitForSeconds(6f);
+
+        defaultBlaster(-5);
+        yield return new WaitForSeconds(0.1f);
+        defaultBlaster(-4);
+        yield return new WaitForSeconds(0.1f);
+        defaultBlaster(-3);
+        yield return new WaitForSeconds(0.1f);
+        defaultBlaster(-2);
+        yield return new WaitForSeconds(0.1f);
+        defaultBlaster(-1);
+        yield return new WaitForSeconds(0.1f);
 
         ErrorAttack();
         randomBlaster();
@@ -64,8 +73,61 @@ public class BlasterPattern3 : MonoBehaviour, IAttackpattern
         defaultBlaster(4);
         yield return new WaitForSeconds(0.3f);
 
-        yield return new WaitForSeconds(3f);
-        StartCoroutine("blasterRoutine"); // 3초 쉬고 무한 반복
+        BlasterFollowingPlayer();
+        yield return new WaitForSeconds(1.5f);
+        BlasterFollowingPlayer();
+        yield return new WaitForSeconds(1.5f);
+        BlasterFollowingPlayer();
+        yield return new WaitForSeconds(1.5f);
+        BlasterFollowingPlayer();
+        yield return new WaitForSeconds(1.5f);
+        BlasterFollowingPlayer();
+        yield return new WaitForSeconds(1.5f);
+        BlasterFollowingPlayer();
+        yield return new WaitForSeconds(1.5f);
+        BlasterFollowingPlayer();
+        yield return new WaitForSeconds(1.5f);
+
+        defaultBlaster(-5);
+        yield return new WaitForSeconds(0.1f);
+        defaultBlaster(-4);
+        yield return new WaitForSeconds(0.1f);
+        defaultBlaster(-3);
+        yield return new WaitForSeconds(0.1f);
+        defaultBlaster(-2);
+        yield return new WaitForSeconds(0.1f);
+        defaultBlaster(-1);
+        yield return new WaitForSeconds(0.1f);
+    
+        defaultBlaster(-5);
+        yield return new WaitForSeconds(0.1f);
+        defaultBlaster(-4);
+        yield return new WaitForSeconds(0.1f);
+        defaultBlaster(-3);
+        yield return new WaitForSeconds(0.1f);
+        defaultBlaster(-2);
+        yield return new WaitForSeconds(0.1f);
+        defaultBlaster(-1);
+        yield return new WaitForSeconds(0.1f);
+
+        ErrorAttack();
+        
+        defaultBlaster(-4);
+        yield return new WaitForSeconds(0.3f);
+        defaultBlaster(-3);
+        yield return new WaitForSeconds(0.3f);
+        defaultBlaster(-2);
+        yield return new WaitForSeconds(1.5f);
+
+        defaultBlaster(2);
+        yield return new WaitForSeconds(0.3f);
+        defaultBlaster(3);
+        yield return new WaitForSeconds(0.3f);
+        defaultBlaster(4);
+        yield return new WaitForSeconds(0.3f);
+    
+        yield return new WaitForSeconds(5f);
+        StartCoroutine("blasterRoutine"); // 5초 쉬고 무한 반복
     }
 
     void defaultBlaster(int yAxis) // -5부터 5사이

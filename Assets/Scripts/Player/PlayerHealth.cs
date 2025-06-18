@@ -16,11 +16,14 @@ public class PlayerHealth : MonoBehaviour, IDamagable, IHealable
     AudioSource audioSource; // 사운드를 재생 할 오디오 소스 컴포넌트
     [SerializeField] AudioClip damageSound; // 피해를 입었을 때 재생할 사운드 
     [SerializeField] AudioClip healSound; // 체력을 회복할 때 재생할 사운드
+
+    public GameManager current;
     void Start()
     {
         CurrentHealth = initHealth;
         hitAnimator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>(); 
+        current = FindAnyObjectByType<GameManager>();
     }
 
     void Update()
@@ -59,7 +62,24 @@ public class PlayerHealth : MonoBehaviour, IDamagable, IHealable
     {
         Debug.Log("사망!!");
         // 사망처리 구현필요 ( 임시로 씬 재로드 )
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // 현재 씬의 이름을 가져와 다시 호출
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name); // 현재 씬의 이름을 가져와 다시 호출
+        //SceneManager.LoadScene("DeadScene"); 
+        //SceneManager.LoadScene("StartCutScene"); 
+        if(current.CurrentStage == 1 )
+        {
+            SceneManager.LoadScene("stage1EndingScene");
+        }
+        else if(current.CurrentStage == 2)
+        {
+            SceneManager.LoadScene("stage2EndingScene");
+
+        }
+        else if(current.CurrentStage==3)
+        {
+            SceneManager.LoadScene("stage3EndingScene");
+
+        }
+
     }
 
     private void updateSlider() // 현재 체력을 입력받아 체력 게이지를 업데이트.

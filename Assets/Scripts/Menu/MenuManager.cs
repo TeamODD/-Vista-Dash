@@ -8,6 +8,16 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("StartCutScene");
     }
 
+    public void CreditsButton()
+    {
+        SceneManager.LoadScene("Credit");
+    }
+
+    public void RuleButton()
+    {
+        SceneManager.LoadScene("GameRule");
+    }
+
     public void EasterEgg()
     {
         Instantiate(Glitch, Vector3.zero, Quaternion.identity);

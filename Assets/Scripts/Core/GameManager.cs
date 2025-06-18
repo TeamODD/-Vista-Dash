@@ -10,10 +10,22 @@ public class GameManager : MonoBehaviour
     public GameObject Stage2_2;
     public GameObject Stage3_1;
     public GameObject Stage3_2;
+    [SerializeField] GameObject MusicUI_1;
+    [SerializeField] GameObject MusicUI_2;
+    [SerializeField] GameObject MusicUI_3;
+    [SerializeField] GameObject bossAlertMessage;
 
     //public GameObject cutScene;
 
-    public GameObject testBoss;
+    [SerializeField] private GameObject Boss1;
+    [SerializeField] private int S1boss = 15;
+    [SerializeField] private GameObject Boss2;
+    [SerializeField] private int S2boss = 45;
+    [SerializeField] private GameObject Boss3;
+    [SerializeField] private int S3boss = 75;
+
+    [SerializeField] private int S1toS2 = 30;
+    [SerializeField] private int S2toS3 = 60;
 
     public PlatformSpawner Spawner; //PlatformSpawner �� Spawner�� �ҷ���
     public ScrollingObject scrollingObject;
@@ -29,6 +41,7 @@ public class GameManager : MonoBehaviour
 
     public bool isBoss = false;
     public int bosslog = 0;
+    public int dieboss = 0;
 
     //public float cutSceneSeconds = 10f; 
     //public float cutSceneSpeed = 4f;  //컷신 움직이는 속도
@@ -47,13 +60,13 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        MusicUI_1.SetActive(true);
         Spawner = FindAnyObjectByType<PlatformSpawner>();
         Spawner.UpdatePlatformSpeed(CurrentSpeed); // PlatformSpawner�� Speed�� ���� �ӵ��� ����
         scrollingObject = FindAnyObjectByType<ScrollingObject>();
         stage1Music = GetComponent<AudioSource>();
         stage2Music = GetComponent<AudioSource>();
         stage3Music = GetComponent<AudioSource>();
-
 
         //stage1Music.Play();
         //stage3Music.Stop();
@@ -72,10 +85,10 @@ public class GameManager : MonoBehaviour
 
         int CurrentScore = Spawner.GetScore(); // PlatformSpawner���� ���� ���ھ� �޾ƿ�
         Debug.Log("스코어" +  CurrentScore + "스테이지" + CurrentStage + "속도" + CurrentSpeed + "보스로그" + bosslog);
-        if (((CurrentStage == 1 && CurrentScore >= 30) && Spawner.PlatformCount >= 30) && bosslog == 1)  // 2�������� ���Խ�
+        if (((CurrentStage == 1 && CurrentScore >= S1toS2) && Spawner.PlatformCount >= S1toS2) && bosslog == 1)  // 2�������� ���Խ�
         {
-            //stage1Music.Stop();
-            //stage2Music.Play();
+            MusicUI_2.SetActive(true);
+
             Stage1_1.SetActive(false);
             Stage1_2.SetActive(false);
             Stage2_1.SetActive(true);
@@ -90,10 +103,10 @@ public class GameManager : MonoBehaviour
             scrollingObject.UpdateSpeed(CurrentSpeed); // ��ũ�Ѹ� �Ѵ� �ӵ� ����
             */
         }
-        else if (((CurrentStage == 2 && CurrentScore >= 60) && Spawner.PlatformCount >= 60) && bosslog == 2) // 3�������� ���Խ�
+        else if (((CurrentStage == 2 && CurrentScore >= S2toS3) && Spawner.PlatformCount >= S2toS3) && bosslog == 2) // 3�������� ���Խ�
         {
-            //stage2Music.Stop();
-            //stage3Music.Play();
+            MusicUI_3.SetActive(true);
+
             Stage1_1.SetActive(false);
             Stage1_2.SetActive(false);
             Stage2_1.SetActive(false);
@@ -111,19 +124,22 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (((CurrentStage == 1 && Spawner.PlatformCount >= 15) && isBoss == false) && bosslog == 0)
+        if (((CurrentStage == 1 && Spawner.PlatformCount >= S1boss) && isBoss == false) && bosslog == 0)
         {
-            testBoss.SetActive(true);
+            bossAlertMessage.SetActive(true);
+            Instantiate(Boss1, new Vector3(10, 10, 0), Quaternion.identity);
             bosslog++;
         }
-        else if (((CurrentStage == 2 && Spawner.PlatformCount >= 45) && isBoss == false) && bosslog == 1)
+        else if (((CurrentStage == 2 && Spawner.PlatformCount >= S2boss) && isBoss == false) && bosslog == 1)
         {
-            testBoss.SetActive(true);
+            bossAlertMessage.SetActive(true);
+            Instantiate(Boss2, new Vector3(10, 10, 0), Quaternion.identity);
             bosslog++;
         }
-        else if (((CurrentStage == 3 && Spawner.PlatformCount >= 70)&&isBoss == false) && bosslog == 2)
+        else if (((CurrentStage == 3 && Spawner.PlatformCount >= S3boss)&&isBoss == false) && bosslog == 2)
         {
-            testBoss.SetActive(true);
+            bossAlertMessage.SetActive(true);
+            Instantiate(Boss3, new Vector3(10, 10, 0), Quaternion.identity);
             bosslog++;
         }
     }
