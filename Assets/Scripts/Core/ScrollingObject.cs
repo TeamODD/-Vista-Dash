@@ -6,7 +6,7 @@ public class ScrollingObject : MonoBehaviour
     public GameManager GameManager;
     public enum MoveDirection { Left, Right, Up, Down, LeftUP, LeftDown }
     public MoveDirection direction = MoveDirection.Left;
-    [SerializeField] float leftSpeed = 10.0f;
+    public float leftSpeed = 10.0f;
 
     public void UpdateSpeed(float newspeed)
     {

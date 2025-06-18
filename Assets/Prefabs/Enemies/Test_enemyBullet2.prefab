@@ -105,7 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameManager: {fileID: 0}
   direction: 0
-  leftSpeed: 30
+  leftSpeed: 20
 --- !u!58 &597476782031077257
 CircleCollider2D:
   m_ObjectHideFlags: 0

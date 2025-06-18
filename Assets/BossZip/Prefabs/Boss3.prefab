@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5369125302307599178}
   - component: {fileID: 6233862027093996584}
   - component: {fileID: 2510937256619591624}
+  - component: {fileID: 7020143818520127809}
   m_Layer: 0
   m_Name: Boss3
   m_TagString: Player
@@ -32,10 +33,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.46, y: 0.22, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 159034748759945112}
+  - {fileID: 3060744834197044234}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6581090354629214641
@@ -81,7 +83,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 6552602768899788582, guid: 328742faec267436fae8c7abe7545b6b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -137,7 +139,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.5233297, y: 3.6950219}
+  m_Size: {x: 1, y: 20}
   m_EdgeRadius: 0
 --- !u!114 &2276275877977624467
 MonoBehaviour:
@@ -166,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 814b614ecb7d54a5fb6473f650e217a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitLife: 400
+  InitLife: 500
   CurrentLife: 0
   Tombstone: {fileID: 7594751414524792298, guid: f8cd18f82dfcb4a4787faea347023482, type: 3}
   bossSlider: {fileID: 0}
@@ -175,7 +177,8 @@ MonoBehaviour:
   hitEffect3: {fileID: 6195160704100416144, guid: 8ca3f5f1fb62d454d97e34e58c2ce498, type: 3}
   hitEffect4: {fileID: 3075389714419783922, guid: 9fbc19d22fa2d47b6a3859d3a5882f9c, type: 3}
   gameManager: {fileID: 0}
-  testBoss: {fileID: 0}
+  EndingSceneObject: {fileID: 4078268696882656693, guid: 2b8aea47b5829834491d5c8e9fd7b5db, type: 3}
+  isStage3Boss: 1
 --- !u!114 &6233862027093996584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,6 +208,28 @@ MonoBehaviour:
   moveDuration: 1
   movement: {fileID: 6233862027093996584}
   gameManager: {fileID: 0}
+--- !u!95 &7020143818520127809
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5321772251098312049}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d8387b3cbb46483baabf3b7a3ffcdac, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7664043769321904209
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,3 +317,73 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &3416499546833166170
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6985456419114802791}
+    m_Modifications:
+    - target: {fileID: 364838888648942416, guid: f1de023a988374695ad8c44b155644b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 364838888648942416, guid: f1de023a988374695ad8c44b155644b0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 364838888648942416, guid: f1de023a988374695ad8c44b155644b0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 364838888648942416, guid: f1de023a988374695ad8c44b155644b0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 364838888648942416, guid: f1de023a988374695ad8c44b155644b0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 364838888648942416, guid: f1de023a988374695ad8c44b155644b0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 364838888648942416, guid: f1de023a988374695ad8c44b155644b0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 364838888648942416, guid: f1de023a988374695ad8c44b155644b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 364838888648942416, guid: f1de023a988374695ad8c44b155644b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 364838888648942416, guid: f1de023a988374695ad8c44b155644b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2216118337150108275, guid: f1de023a988374695ad8c44b155644b0, type: 3}
+      propertyPath: m_Name
+      value: BossShield
+      objectReference: {fileID: 0}
+    - target: {fileID: 2216118337150108275, guid: f1de023a988374695ad8c44b155644b0, type: 3}
+      propertyPath: m_TagString
+      value: UnDestroyable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8202857609124440897, guid: f1de023a988374695ad8c44b155644b0, type: 3}
+      propertyPath: InitLife
+      value: 150
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f1de023a988374695ad8c44b155644b0, type: 3}
+--- !u!4 &3060744834197044234 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 364838888648942416, guid: f1de023a988374695ad8c44b155644b0, type: 3}
+  m_PrefabInstance: {fileID: 3416499546833166170}
+  m_PrefabAsset: {fileID: 0}

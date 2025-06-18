@@ -133,9 +133,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 42
-        width: 74
-        height: 27
+        y: 0
+        width: 123
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,33 +150,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: minus1_test_1
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 0
-        width: 55
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 557c5ac4b9db66fd0800000000000000
-      internalID: -2348981680923621547
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f2d3a2b739395c04186c8317236182d3
     internalID: 0
     vertices: []
     indices: 
@@ -187,7 +165,6 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       minus1_test_0: 2003323550339669365
-      minus1_test_1: -2348981680923621547
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

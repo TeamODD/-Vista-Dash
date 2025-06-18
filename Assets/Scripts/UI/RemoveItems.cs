@@ -6,7 +6,7 @@ public class RemoveItems : MonoBehaviour
     {
         Debug.Log(other.gameObject.name +"에 충돌함");
         
-        if ((other.gameObject.tag != "BackGround") && (other.gameObject.tag != "Player")) 
+        if ((other.gameObject.tag != "BackGround") && (other.gameObject.tag != "Player") && (other.gameObject.tag != "UnDestroyable")) 
         {
                 Destroy(other.gameObject);
         }
@@ -16,7 +16,7 @@ public class RemoveItems : MonoBehaviour
     {
         Debug.Log(other.gameObject.name + "에 충돌함 (Trigger)");
 
-        if ((other.gameObject.tag != "BackGround") && (other.gameObject.tag != "Player"))
+        if ((other.gameObject.tag != "BackGround") && (other.gameObject.tag != "Player") && (other.gameObject.tag != "UnDestroyable"))
         {
             Destroy(other.gameObject);
         }

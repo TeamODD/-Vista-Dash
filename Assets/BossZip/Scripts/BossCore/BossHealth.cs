@@ -12,8 +12,10 @@ public class BossHealth : MonoBehaviour, IDamagable
     [SerializeField] GameObject hitEffect3; // 피격 이펙트 3
     [SerializeField] GameObject hitEffect4; // 피격 이펙트 4
     public GameManager gameManager;
+    [SerializeField] GameObject EndingSceneObject;
 
-    public GameObject testBoss;
+    [SerializeField] bool isStage3Boss = false;
+
     void Start()
     {
         CurrentLife = InitLife; // 체력 초기화
@@ -53,8 +55,13 @@ public class BossHealth : MonoBehaviour, IDamagable
     {
         Instantiate(Tombstone, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
         gameManager.RemoveBoss();
+        gameManager.dieboss++;
+        if (isStage3Boss)
+        {
+            Instantiate(EndingSceneObject, new Vector3(41, 0, 0), Quaternion.identity);
+        }
         Destroy(gameObject); // 스스로를 파괴
-        //testBoss.SetActive(false);
+        //gameObject.SetActive(false); // 보스 하나로 돌리는 임시용
     }
 
     void updateSlider() // 체력바를 갱신
